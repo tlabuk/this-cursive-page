@@ -1,0 +1,6 @@
+.stickyTable thead {
+  position: sticky !important;
+  top: 0 !important;
+  background-color: #fff; /* Background color for the sticky heading */
+  z-index: 1; /* Ensure the sticky heading appears above other content */
+}
