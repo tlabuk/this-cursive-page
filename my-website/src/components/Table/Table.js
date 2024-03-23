@@ -33,15 +33,18 @@ export default function CustomTable(props) {
                     <td>Mandatory. Specifies the release channel. Must be one of: <code>beta</code> or <code>stable</code>.</td>
                 </tr>
                 {/* <tr>
-                    <td colSpan={3}>{props.sourceName}Blop</td>
-                </tr> */}
-                <tr>
                     <td><code>{props.directField}</code></td>
                     <td><em>{props.directFieldType}</em></td>
-                    <td dangerouslySetInnerHTML = {{ __html: props.directFieldTypeDescription }} />
-                </tr>
+                    <td dangerouslySetInnerHTML={{ __html: props.directFieldTypeDescription }} ></td>
+                </tr> */}
+                {props.additionalRows.map((row, index) => (
+                    <tr key={index}>
+                        <td><code>{row.field}</code></td>
+                        <td><em>{row.type}</em></td>
+                        <td dangerouslySetInnerHTML={{ __html: row.description }} ></td>
+                    </tr>
+                ))}
             </tbody>
         </table>
     );
 }
-

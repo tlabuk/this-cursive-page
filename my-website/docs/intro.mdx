@@ -7,10 +7,17 @@ import CustomTable from '/src/components/Table/Table.js';
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
-<CustomTable
+<!-- <CustomTable
   directField="directField"
   directFieldType="directFieldType"
   directFieldTypeDescription="Description for &#8364; <b>direct</b> <a href=''>field</a> <li>hello</li>"
+/> -->
+
+<CustomTable
+  additionalRows={[
+    { field: "spec.[]", type: "string", description: "<i>Description</i> for additional field 1" },
+    { field: "additionalField2", type: "additionalType2", description: "<b>Description</b> for additional field 2" },
+  ]}
 />
 
 
