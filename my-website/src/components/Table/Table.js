@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
 
+// ADD MANDATORY, OPTIONAL AND SUP COMPONENTS, ALIGN DESCRIPTIONS
+
 export default function CustomTable(props) {
     const showLogCollectionRow = props.showLogCollectionRow === 'true';
     const showReplayRows = props.showReplayRows === 'true';
@@ -19,7 +21,7 @@ export default function CustomTable(props) {
                 <tr>
                     <td><code>queryDelay.unit</code></td>
                     <td><em>enum</em></td>
-                    <td>Mandatory. Specifies the unit for the query delay. Possible values: <code>Second</code> or <code>Minute</code>.</td>
+                    <td>Mandatory. Specifies the unit for the query delay. Possible values: <code>Second</code> | <code>Minute</code>.</td>
                 </tr>
                 <tr>
                     <td><code>queryDelay.value</code></td>
@@ -30,7 +32,7 @@ export default function CustomTable(props) {
                     <tr>
                         <td><code>logCollectionEnabled</code></td>
                         <td><em>boolean</em></td>
-                        <td>Optional. Defaults to <code>false</code>. Set to <code>true</code> if you'd like your source to collect logs. Beta functionality available only through direct release channel. Reach out to <a href="mailto:support@nobl9.com">support@nobl9.com</a> to activate it.</td>
+                        <td>Optional. Defaults to <code>false</code>. Set to <code>true</code> if you'd like your direct to collect event logs. Beta functionality available only through direct release channel. Reach out to <a href="mailto:support@nobl9.com">support@nobl9.com</a> to activate it.</td>
                     </tr>
                 )}
                 <tr>
@@ -50,7 +52,7 @@ export default function CustomTable(props) {
                     <tr key={index}>
                         <td><code>{row.field}</code></td>
                         <td><em>{row.type}</em></td>
-                        <td dangerouslySetInnerHTML={{ __html: row.description }} ></td>
+                        <td dangerouslySetInnerHTML={{ __html: row.description }} />
                     </tr>
                 ))}
                 {showReplayRows && (
@@ -60,7 +62,7 @@ export default function CustomTable(props) {
                         </tr>
                         <tr>
                             <td><code>maxDuration.value</code></td>
-                            <td><em>integer</em></td>
+                            <td><em>numeric</em></td>
                             <td>Mandatory. Specifies the maximum duration for historical data retrieval. Must be greater than or equal to 0.</td>
                         </tr>
                         <tr>
@@ -70,7 +72,7 @@ export default function CustomTable(props) {
                         </tr>
                         <tr>
                             <td><code>defaultDuration.value</code></td>
-                            <td><em>integer</em></td>
+                            <td><em>numeric</em></td>
                             <td>Mandatory. Specifies the default duration for historical data retrieval. Must be greater than or equal to 0 and less than or equal to the value of <code>maxDuration</code>.</td>
                         </tr>
                         <tr>
