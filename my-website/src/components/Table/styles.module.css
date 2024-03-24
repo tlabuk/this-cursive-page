@@ -1,6 +1,11 @@
-.stickyTable thead {
-  position: sticky !important;
-  top: 0 !important;
-  background-color: #fff; /* Background color for the sticky heading */
-  z-index: 1; /* Ensure the sticky heading appears above other content */
+.stickyTable tr:not(th) {
+  font-size: 12px;
+}
+
+.stickyTable th {
+    font-size: 14px;
+}
+.categoryRow {
+    text-align: center;
+    font-weight: bold;
 }
