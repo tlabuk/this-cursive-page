@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 export default function CustomTable(props) {
     const showLogCollectionRow = props.showLogCollectionRow === 'true';
     const showReplayRows = props.showReplayRows === 'true';
-    const showSourceFields = props.showSourceFields === 'true';
+    const showSourceRows = props.showSourceRows === 'true';
 
     return (
         <table className={styles.stickyTable}>
@@ -40,8 +40,7 @@ export default function CustomTable(props) {
                     <td><em>string</em></td>
                     <td>Mandatory. Specifies the release channel. Must be one of: <code>beta</code> or <code>stable</code>.</td>
                 </tr>
-                {
-                    showSourceFields && (
+                {showSourceRows && (
                         <>
                             <tr>
                                 <td className={styles.categoryRow} colSpan={3}>{props.sourceNameFields}</td>
