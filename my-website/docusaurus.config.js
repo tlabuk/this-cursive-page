@@ -4,11 +4,11 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'This.cursive site',
+  title: 'This.cursive | Expert technical writing',
   tagline: 'Discourse rules all',
   favicon: 'img/favicon.ico',
 
@@ -46,7 +46,7 @@ const config = {
             '**/__tests__/**',
           ],
           mdxPageComponent: '@theme/MDXPage',
-      },
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -64,7 +64,7 @@ const config = {
           alt: 'Site logo',
           src: 'img/logo.svg',
           srcDark: 'img/logo-dark.svg',
-          style: {paddingRight: '25px'},
+          style: { paddingRight: '25px' },
           width: '200px'
         },
         items: [

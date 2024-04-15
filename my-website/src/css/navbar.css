@@ -1,12 +1,23 @@
+.navbar {
+    box-shadow: var(--navbar-box-shadow);
+} 
+
 .navbar__item {
     font-weight: bold;
     margin-right: 80px;
     text-align: right;
 }
 
+@media screen and (max-width: 996px) {
+    .navbar__item {
+        display: none !important;
+    }
+}
+
 .navbar__link {
   display: inline-block;
   position: relative;
+  font-size: 18px;
 }
 
 .navbar__link:after {
