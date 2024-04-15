@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'This.cursive site',
+  tagline: 'Discourse rules all',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'labtom', // Usually your GitHub org/user name.
+  projectName: 'this.cursive', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -35,11 +35,6 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          },
         pages: {
           path: 'src/pages',
           routeBasePath: '',
@@ -65,24 +60,28 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Home',
         logo: {
           alt: 'Site logo',
           src: 'img/logo.svg',
           srcDark: 'img/logo-dark.svg',
-          style: {paddingRight: '25px'}
+          style: {paddingRight: '25px'},
+          width: '200px'
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'right',
-            label: 'Tutorial',
+            to: '/',
+            label: 'Home',
+            position: 'left'
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            to: '/markdown-page',
+            label: 'About me',
+            position: 'left',
+          },
+          {
+            to: '/markdown-page',
+            label: 'My work',
+            position: 'left',
           },
         ],
       },

@@ -1,27 +1,24 @@
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+import { homePageContent } from './data/content.js';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+    <header>
+      <div className={styles.row__hero}>
+        <div className={styles.column__hero}>
+          <div className={`${styles.hero__title} ${styles.typewriter}`}>
+            {homePageContent[0].title}
+          </div>
+          <div className={styles.hero__subtitle}>
+            {homePageContent[0].lead}
+          </div>
+        </div>
+        <div className={styles.column__hero}>
+          <img src="/img/hero/logo-big-horizontal.svg" className={styles.logoBanner} />
         </div>
       </div>
     </header>
@@ -29,7 +26,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
