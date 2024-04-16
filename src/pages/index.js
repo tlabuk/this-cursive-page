@@ -17,8 +17,8 @@ function HomepageHeader() {
             className={`${styles.hero__title} ${styles.typewriter}`}
             dangerouslySetInnerHTML={{ __html: `${homePageContent[0].title}&nbsp;` }}
           ></div>
-          <div className={styles.hero__subtitle}>
-            {homePageContent[0].lead}
+          <div className={styles.hero__subtitle}
+            dangerouslySetInnerHTML={{ __html: `${homePageContent[0].lead}` }}>
           </div>
         </div>
         <div className={styles.column__hero}>

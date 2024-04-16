@@ -1,0 +1,8 @@
+footer {
+  background-color: var(--ifm-footer-bg-color) !important;
+  font-size: 12px;
+}
+
+.footer__col {
+  text-align: center;
+}

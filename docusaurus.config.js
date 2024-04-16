@@ -128,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} this.cursive.`,
+        copyright: `Copyright © ${new Date().getFullYear()} this.cursive | labtom.`,
       },
       prism: {
         theme: prismThemes.github,

@@ -38,3 +38,6 @@
   transform-origin: bottom left;
 }
 
+.footer__col {
+  text-align: center;
+}
