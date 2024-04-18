@@ -1,10 +1,15 @@
+// HomepageFeatures.js
+
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import ReadMoreButton from './ReadMoreButton/ReadMore';
 
 const FeatureList = [
   {
     title: 'Easy to Use',
+    href: 'https://example.com/easy-to-use', // Add the href value here
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
@@ -15,6 +20,7 @@ const FeatureList = [
   },
   {
     title: 'Focus on What Matters',
+    href: 'https://example.com/focus-on-what-matters', // Add the href value here
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -25,6 +31,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by React',
+    href: 'https://example.com/powered-by-react', // Add the href value here
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
@@ -35,7 +42,7 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description, href }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -44,6 +51,7 @@ function Feature({Svg, title, description}) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        <ReadMoreButton href={href} /> {/* Pass href as prop */}
       </div>
     </div>
   );
