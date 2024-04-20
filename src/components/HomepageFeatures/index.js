@@ -1,6 +1,4 @@
-// HomepageFeatures.js
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -8,41 +6,60 @@ import ReadMoreButton from './ReadMoreButton/ReadMore';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    href: 'https://example.com/easy-to-use', // Add the href value here
+    title: 'Technical documentation for Nobl9',
+    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Nobl9 is the first SLO platform that ensures monitoring of software projects. I’m a major contributor to Nobl9 documentation and web developer of documentation tools.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    href: 'https://example.com/focus-on-what-matters', // Add the href value here
+    title: 'Fungal computers',
+    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        Fungi are one of the oldest organisms on the Earth. They connect forests into one intelligent organism through their mycelial cells. Could we make computer hardware out of them?
+      </>
+    ),
+  },
+  {
+    title: 'Intelligible AI',
+    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q3_2021.pdf',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Our expectations towards the transformative potential of AI are extremely high. To fully harness it, we need to understand complexities AI algorithms. How can we achieve that?
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    href: 'https://example.com/powered-by-react', // Add the href value here
+    title: 'Federated Machine Learning',
+    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        While Intelligence of AI is of extremely limited sort, algorithms govern every aspect of our lives, from content on social media, to industry. Can FL improve how AI works?
+      </>
+    ),
+  },
+  {
+    title: 'Codex',
+    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Codex, a book with folded pages, has functioned as a springboard for innovations since its reintroduction in the 9<sup>th</sup > century AD. How did it accelerate scientific discoveries?
       </>
     ),
   },
 ];
 
+
 function Feature({ Svg, title, description, href }) {
+
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -51,16 +68,23 @@ function Feature({ Svg, title, description, href }) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
-        <ReadMoreButton href={href} /> {/* Pass href as prop */}
+        <ReadMoreButton href={href} />
       </div>
     </div>
   );
 }
 
 export default function HomepageFeatures() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={clsx(styles.sectionTitle, isVisible && styles.slideIn)}>Check samples of my work</div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
