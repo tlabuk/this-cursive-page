@@ -52,8 +52,21 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            spec: 'openapi/index.yaml',
+            route: '/api/',
+          },
+        ],
+        theme: {
+          primaryColor: '#fff',
+        },
+      },
+    ]
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

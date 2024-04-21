@@ -16,6 +16,17 @@ const FeatureList = [
     ),
   },
   {
+    title: 'API documentation',
+    href: '/api/',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+
+        This OpenAPI specification outlines a dummy API with endpoints for user management. It provides code samples in Python, JavaScript, Java, and cURL for interacting with the API.
+      </>
+    ),
+  },
+  {
     title: 'Fungal computers',
     href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
@@ -42,16 +53,6 @@ const FeatureList = [
     description: (
       <>
         While Intelligence of AI is of extremely limited sort, algorithms govern every aspect of our lives, from content on social media, to industry. Can FL improve how AI works?
-      </>
-    ),
-  },
-  {
-    title: 'Codex',
-    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Codex, a book with folded pages, has functioned as a springboard for innovations since its reintroduction in the 9<sup>th</sup > century AD. How did it accelerate scientific discoveries?
       </>
     ),
   },

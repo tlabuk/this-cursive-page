@@ -1,0 +1,257 @@
+openapi: 3.0.0
+info:
+  title: Dummy API
+  version: 1.0.0
+  description: |
+    ## Hello
+
+    This is a dummy OpenAPI specification for demonstration purposes.
+
+    It's built with Docusaurus and Redocly, customised with CSS and React components.
+servers:
+  - url: https://api.example.com/v1
+paths:
+  /users:
+    get:
+      summary: Get all users
+      description: |
+        Hello
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    email:
+                      type: string
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  $ref: "#/components/schemas/User/properties/id"
+                name:
+                  $ref: "#/components/schemas/User/properties/name"
+                email:
+                  $ref: "#/components/schemas/User/properties/email"
+                role:
+                  $ref: "#/components/schemas/User/properties/role"
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X POST \
+              https://api.example.com/auth/token \
+              -H 'Content-Type: application/json' \
+              -d '{
+                "username": "your_username",
+                "password": "your_password"
+              }'
+      responses:
+        "201":
+          description: User created successfully
+        "400":
+          description: Bad request
+  /users/{userId}:
+    parameters:
+      - name: userId
+        in: path
+        description: ID of the user to retrieve
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Get user by ID
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    $ref: "#/components/schemas/User/properties/id"
+                  name:
+                    $ref: "#/components/schemas/User/properties/name"
+                  email:
+                    $ref: "#/components/schemas/User/properties/email"
+                  role:
+                    $ref: "#/components/schemas/User/properties/role"
+        "404":
+          description: User not found
+      x-code-samples:
+        - lang: Python
+          source: |
+            import requests
+
+            # Fetch all users
+            response = requests.get("https://api.example.com/v1/users")
+            print(response.json())
+
+            # Create a new user
+            new_user = {"name": "John Doe", "email": "john@example.com"}
+            response = requests.post("https://api.example.com/v1/users", json=new_user)
+            print(response.json())
+        - lang: JavaScript
+          source: |
+            const fetch = require('node-fetch');
+
+            // Fetch all users
+            fetch("https://api.example.com/v1/users")
+              .then(response => response.json())
+              .then(data => console.log(data))
+              .catch(error => console.error('Error:', error));
+
+            // Create a new user
+            fetch("https://api.example.com/v1/users", {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name: "John Doe", email: "john@example.com" })
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+
+        - lang: Java
+          source: |
+            import java.io.IOException;
+            import okhttp3.MediaType;
+            import okhttp3.OkHttpClient;
+            import okhttp3.Request;
+            import okhttp3.RequestBody;
+            import okhttp3.Response;
+
+            public class Main {
+                public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+                public static final OkHttpClient client = new OkHttpClient();
+
+                public static void main(String[] args) throws IOException {
+                    // Fetch all users
+                    Request request = new Request.Builder()
+                        .url("https://api.example.com/v1/users")
+                        .build();
+
+                    try (Response response = client.newCall(request).execute()) {
+                        System.out.println(response.body().string());
+                    }
+
+                    // Create a new user
+                    String json = "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}";
+                    RequestBody body = RequestBody.create(json, JSON);
+                    Request postRequest = new Request.Builder()
+                        .url("https://api.example.com/v1/users")
+                        .post(body)
+                        .build();
+
+                    try (Response response = client.newCall(postRequest).execute()) {
+                        System.out.println(response.body().string());
+                    }
+                }
+            }
+
+    put:
+      summary: Update user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  $ref: "#/components/schemas/User/properties/id"
+                name:
+                  $ref: "#/components/schemas/User/properties/name"
+                email:
+                  $ref: "#/components/schemas/User/properties/email"
+                role:
+                  $ref: "#/components/schemas/User/properties/role"
+      responses:
+        "200":
+          description: User updated successfully
+        "404":
+          description: User not found
+    delete:
+      summary: Delete user
+      operationId: deleteUser
+      responses:
+        "204":
+          description: User deleted successfully
+        "404":
+          description: User not found
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X DELETE \
+              https://api.example.com/v1/users/123 \
+              -H 'Authorization: Bearer <your_access_token>'
+        - lang: Python
+          source: |
+            import requests
+
+            # Delete user by ID
+            response = requests.delete("https://api.example.com/v1/users/123")
+            if response.status_code == 204:
+                print("User deleted successfully")
+            elif response.status_code == 404:
+                print("User not found")
+            else:
+                print("Error:", response.status_code)
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: >
+            The unique identifier for the user. This follows the guidelines specified in
+            [RFC 7643](https://datatracker.ietf.org/doc/html/rfc7643). Example: <code>e9e30dba-f08f-4b69-9d3a-8d97c8360b19</code>
+        name:
+          type: string
+          maxLength: 100
+          description: The unique name of the user. Max length is 100 characters. This follows the guidelines specified in [DNS RFC 1123](https://datatracker.ietf.org/doc/html/rfc1123). Example&#58; <code>user-name</code>
+        email:
+          type: string
+          format: email
+          description: The email address of the user.
+        role:
+          type: string
+          enum:
+            - Admin
+            - User
+            - Viewer
+          description: The role of the user.
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+  - apiKey: []
+x-code-samples:
+  - lang: python
+    source: |
+      import requests
+
+      # Fetch all users
+      response = requests.get("https://api.example.com/v1/users")
+      print(response.json())
+
+      # Create a new user
+      new_user = {"name": "John Doe", "email": "john@example.com"}
+      response = requests.post("https://api.example.com/v1/users", json=new_user)
+      print(response.json())

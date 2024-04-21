@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --main-api-bg-color: #ffffff18;
+    --sidebar-api-bg-color: #fff;
+}
+
+[data-theme='dark'] {
+    --main-api-bg-color: #242526c8;
+    --sidebar-api-bg-color: #303030d6;
+}
+
+.api-content {
+    background-color: var(--main-api-bg-color);
+}
+
+.api-content a {
+    color: var(--ifm-color-primary-darker) !important;
+    text-decoration: underline !important;
+}
+
+.api-content a:hover {
+    color: var(--ifm-color-primary-light) !important;
+}
+
+.menu-content, .sc-imiRDh  {
+    background-color: var(--sidebar-api-bg-color) !important;
+}
+
+.imiXRU {
+    background-color: #2a2720 !important;
+    border-radius: 4px;
+}
