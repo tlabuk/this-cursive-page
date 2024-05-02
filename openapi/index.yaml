@@ -16,7 +16,7 @@ tags:
       The <code>/users</code> endpoint allows you to manage users in your organization. Using it, you can retrieve a list of all users registered in the system via a <code>GET</code> request or create a new user using a <code>POST</code> request. You can also programmatically bulk-update user data via <code>PUT</code> and <code>DELETE</code> methods.
       <p/>
       The endpoint enforces proper authentication and authorization mechanisms to ensure secure access to user resources, with error responses provided for unauthorized and forbidden actions.
-      <div class='note'>See the <a href='/api/#tag/Api-Token/paths/~1apiToken/post'>API token</a> section above for more details</div>
+      <div class='note'>See the <a href='/api/#tag/Api-Token/paths/~1apiToken/post'>API token</a> section above for more details.</div>
 paths:
   /apiToken:
     post:
@@ -25,8 +25,7 @@ paths:
       description: >-
         This endpoint allows you to generate an API token for authentication purposes.
         API tokens serve as credentials to access protected resources within the system.<br/><br/>
-        <div class='note'>Remember to store the generated token securely. You can include it in subsequent requests
-        for authentication.</div>
+        <div class='note'>Remember to store the generated token securely. You can include it in subsequent requests for authentication.</div>
         <p/>
         <h3>Authorization header</h3>
         The Authorization header is used to authenticate the client's request to the server.

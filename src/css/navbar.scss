@@ -1,0 +1,41 @@
+.navbar {
+    box-shadow: var(--navbar-box-shadow);
+  
+    &__item {
+        font-weight: bold;
+        margin-right: 80px;
+        text-align: right;
+
+        @media screen and (max-width: 996px) {
+            display: none !important;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        font-size: 18px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: -1px;
+            background-color: var(--ifm-link-color);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.footer__col {
+    text-align: center;
+}

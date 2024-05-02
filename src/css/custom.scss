@@ -1,12 +1,4 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,500&display=swap');
+@import './utilities/manifest';
 
 :root {
   --ifm-color-primary: #f7ba0f;
@@ -25,7 +17,6 @@
   --ifm-font-family-monospace: "JetBrains Mono", monospace;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #b18306e8;
   --ifm-color-primary-dark: #e4aa08;
@@ -40,6 +31,6 @@
 }
 
 
-@import './navbar.css';
-@import './footer.css';
-@import './api.css';
+@import './navbar.scss';
+@import './footer.scss';
+@import './api.scss';

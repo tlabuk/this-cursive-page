@@ -48,7 +48,7 @@ const config = {
           mdxPageComponent: '@theme/MDXPage',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       }),
     ],
@@ -148,6 +148,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  plugins: ['docusaurus-plugin-sass'],
 };
 
 export default config;

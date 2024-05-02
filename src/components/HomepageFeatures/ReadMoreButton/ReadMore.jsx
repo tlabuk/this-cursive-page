@@ -1,7 +1,5 @@
-// ReadMoreButton.js
-
 import React from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 const ReadMoreButton = ({ href }) => {
   return (
