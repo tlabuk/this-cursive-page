@@ -87,7 +87,7 @@ const config = {
             position: 'left'
           },
           {
-            to: '/markdown-page',
+            to: '/about/bio',
             label: 'About me',
             position: 'left',
           },
