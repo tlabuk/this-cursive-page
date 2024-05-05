@@ -1,0 +1,69 @@
+.experienceSc {
+    .experienceContent {
+        &.dottedBorderLeft {
+            &::after {
+                top: 10px;
+            }
+        }
+    }
+
+    .experienceList {
+        row-gap: 20px;
+        column-gap: 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 24px;
+        padding: 16px 0;
+
+        @media(max-width: 992px){
+            grid-template-columns: 100%;
+            column-gap: 20px;
+        }
+    }
+    .experienceItem {
+        padding: 12px 0;
+    }
+    .expTime {
+        color: $gray;
+        font-size: 15px;
+        margin-bottom: 4px;
+        column-gap: 4px;
+    }
+    .expPosition {
+        margin-bottom: 10px;
+        column-gap: 20px;
+        font-size: 18px;
+
+        .expPositionText {
+            font-weight: 700;
+        }
+    }
+    .expCompany {
+        gap: 10px;
+        .companyLogo {
+            position: relative;
+            padding: 2px;
+            top: -10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background: $dark-yellow;
+        }
+        .companyName {
+            font-weight: 600;
+        }
+    }
+    .expDescription {
+        margin: 12px 0 4px 0;
+    }
+    .expLinks {
+        a {
+            font-size: 15px;
+            text-decoration: underline;
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            color: $mauve;
+        }
+    }
+}

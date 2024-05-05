@@ -1,0 +1,50 @@
+.goback {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    background: rgb(141, 134, 134);
+    border-radius: 4px;
+    left: 1%;
+    bottom: 20vh;
+    transition: $transition-default;
+
+
+            &:hover {
+                .tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                scale: 1.1;
+            }
+
+
+            .tooltip {
+                position: absolute;
+                top: calc(100% + 8px);
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 12px;
+                background-color: var(--ifm-color-white);
+                color: $mauve;
+                padding: 0 6px;
+                border-radius: 3px;
+                font-weight: 600;
+                box-shadow: $shadow-default;
+                opacity: 0;
+                visibility: hidden;
+                transition: $transition-default;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: calc(100% - 1px);
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border: 5px solid;
+                    border-color: transparent transparent var(--ifm-color-white) transparent;
+                    pointer-events: none;
+                }
+            }
+}

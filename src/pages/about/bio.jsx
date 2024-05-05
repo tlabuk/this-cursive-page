@@ -1,22 +1,27 @@
-import React from "react";
-import Layout from "@theme/Layout";
+import CertificateAward from "./components/CertificateAward/CertificateAward";
+import BackgroundEffect from "./components/background_effect/BackgroundEffect";
+import Education from "./components/education/Education";
+import Experience from "./components/experience/Experience";
+import Header from "./components/header/Header";
+import Hobbies from "./components/hobbies/Hobbies";
+import Skill from "./components/skill/Skill";
+import GoBack from "./components/goback/GoBack";
+import styles from "./assets/sass/style.module.scss";
 
-export default function Hello() {
+const HomeScreen = () => {
   return (
-    <Layout title="Hello" description="Hello React Page">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "70vh",
-          fontSize: "20px",
-        }}
-      >
-        <p>
-          Edit <code>pages/helloReact.js</code> and save to reload.
-        </p>
-      </div>
-    </Layout>
+    <div className={styles.pageContainer}>
+      <Header />
+      <Experience />
+      <Education />
+      <Skill />
+      <CertificateAward />
+      <Hobbies />
+      {/* Effects */}
+      <GoBack />
+      <BackgroundEffect />
+    </div>
   );
-}
+};
+
+export default HomeScreen;
