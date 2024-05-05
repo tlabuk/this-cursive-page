@@ -74,7 +74,7 @@ const ExperienceItem = ({ item }) => {
         className={`${styles.expCompany} ${styles.flex} ${styles.items__Center} ${styles.flex__Wrap}`}
       >
         <div className={styles.companyLogo}>
-          <MdWorkHistory size={25} />
+          <MdWorkHistory size={20} />
         </div>
         <p className={styles.companyName}>{item.company.name}</p>
         <p className={`${styles.companyInfo} ${styles.text}`}>
@@ -104,7 +104,6 @@ ExperienceItem.propTypes = {
     position: PropTypes.string.isRequired,
     diamondColors: PropTypes.array,
     company: PropTypes.shape({
-      logo: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       info: PropTypes.string.isRequired,
     }),

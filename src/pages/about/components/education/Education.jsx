@@ -2,6 +2,7 @@ import DATA from "../../constant/mockData";
 import Title from "../common/Title";
 import PropTypes from "prop-types";
 import styles from "../../assets/sass/style.module.scss";
+import { IoSchoolSharp } from "react-icons/io5";
 
 const Education = () => {
   return (
@@ -30,12 +31,7 @@ const EducationItem = ({ item }) => {
       <div
         className={`${styles.eduTitle} ${styles.flex} ${styles.items__Center} ${styles.text__White}`}
       >
-        <img
-          src={item.icon}
-          className={styles.eduIcon}
-          alt={item.course}
-          role="img"
-        />
+        <IoSchoolSharp size={20} className={styles.eduIcon} />
         <h3 className={styles.eduCourse}>{item.course}</h3>
       </div>
       <p className={`${styles.eduInfo} ${styles.text}`}>
@@ -49,7 +45,7 @@ const EducationItem = ({ item }) => {
 EducationItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
+    // icon: PropTypes.string.isRequired,
     course: PropTypes.string.isRequired,
     institution: PropTypes.string,
     startDate: PropTypes.string.isRequired,

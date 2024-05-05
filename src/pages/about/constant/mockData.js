@@ -34,7 +34,6 @@ const DATA = {
       position: "Tech writer II → Senior Tech Writer",
       diamondColors: ["Purple", "Yellow", "Blue"],
       company: {
-        logo: CompanyLogo1,
         name: "Nobl9",
         info: "USA start-up building SLO management platform",
       },
@@ -58,7 +57,6 @@ const DATA = {
       position: "Freelance Scientific Writer (R&D)",
       diamondColors: ["Blue", "Orange", "Pink"],
       company: {
-        logo: CompanyLogo2,
         name: "Colibrí",
         info: "Consultancy company, based in Kraków, Poland",
       },
@@ -90,7 +88,6 @@ const DATA = {
       position: "Technical Writer",
       diamondColors: ["Green", "Yellow", "Purple"],
       company: {
-        logo: CompanyLogo3,
         name: "Motorola Solutions",
         info: "Worldwide provider of ICT solutions",
       },
@@ -105,7 +102,6 @@ const DATA = {
       position: "R&D consultant",
       diamondColors: ["Green", "Yellow", "Purple"],
       company: {
-        logo: CompanyLogo4,
         name: "Gaeu Consulting",
         info: "Consulting company for deep tech start-ups",
       },
@@ -120,7 +116,6 @@ const DATA = {
       position: "Resource analyst",
       diamondColors: ["Green", "Yellow", "Purple"],
       company: {
-        logo: CompanyLogo4,
         name: "Hitachi Vantara",
         info: "Provider of IoT and data center solutions",
       },
@@ -135,7 +130,6 @@ const DATA = {
       position: "PhD Researcher",
       diamondColors: ["Green", "Yellow", "Purple"],
       company: {
-        logo: CompanyLogo4,
         name: "University of Silesia",
         info: "International scientific reasearch project",
       },
@@ -168,7 +162,6 @@ const DATA = {
   educationalExperiences: [
     {
       id: "edu_1",
-      icon: SkillHtml5,
       course: "Interface Design: Web & Mobile",
       institution: "IT-Academy",
       degree: "Diploma",
@@ -177,7 +170,6 @@ const DATA = {
     },
     {
       id: "edu_2",
-      icon: DiamondLgGreen,
       course: "Fundamentals of UX/UI",
       institution: "Skillshare",
       degree: "Beginner Course",
@@ -186,7 +178,6 @@ const DATA = {
     },
     {
       id: "edu_3",
-      icon: DiamondLgOrange,
       course: "CG Artist",
       institution: "Polygon CG School",
       degree: "Graduate",
@@ -195,7 +186,6 @@ const DATA = {
     },
     {
       id: "edu_4",
-      icon: DiamondLgPink,
       course: "Graphic Design",
       institution: "Belarusian State Academy of Arts",
       degree: "Postgraduate Diploma",
@@ -204,7 +194,6 @@ const DATA = {
     },
     {
       id: "edu_5",
-      icon: DiamondLgYellow,
       course: "SEO Specialist Workshop",
       institution: "ARTOX Media",
       degree: "",
@@ -213,7 +202,6 @@ const DATA = {
     },
     {
       id: "edu_6",
-      icon: DiamondLgBlue,
       course: "Information Technology Software",
       institution:
         "Belarusian State University of Informatics and Radioelectronics",

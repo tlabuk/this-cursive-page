@@ -4,9 +4,13 @@
         gap: 10px;
     }
     .eduIcon {
-        width: 20px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
         position: relative;
         top: -8px;
+        background-color: $dark-yellow;
+        border-radius: 100%;
     }
     .educationList {
         margin-left: 24px;

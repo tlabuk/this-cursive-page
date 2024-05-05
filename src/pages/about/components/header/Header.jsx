@@ -10,6 +10,7 @@ import {
   AiFillEnvironment,
   AiOutlineLink,
 } from "react-icons/ai";
+import { SiAcademia } from "react-icons/si";
 import { FaEnvelope, FaLink, FaLocationDot, FaPhone } from "react-icons/fa6";
 import styles from "../../assets/sass/style.module.scss";
 
@@ -97,9 +98,9 @@ const Header = () => {
             >
               <li className={styles.socialItem}>
                 <Link to="/">
-                  <AiFillIdcard size={25} />
+                  <SiAcademia size={20} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
-                    Portfolio
+                    Academia
                   </span>
                 </Link>
               </li>
