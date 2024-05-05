@@ -1,0 +1,347 @@
+openapi: 3.0.0
+info:
+  title: Showcase API Docs
+  version: 1.0.0
+  description: >-
+    Welcome to a dummy OpenAPI specification for demonstration purposes.
+
+    It's built with Docusaurus and Redocly, and customized with React.
+servers:
+  - url: "https://api.this.cursive/v1"
+tags:
+  - name: Api Token
+    description: Scroll down to read more about operations related to authentication
+  - name: Users
+    description: >-
+      The <code>/users</code> endpoint allows you to manage users in your organization. Using it, you can retrieve a list of all users registered in the system via a <code>GET</code> request or create a new user using a <code>POST</code> request. You can also programmatically bulk-update user data via <code>PUT</code> and <code>DELETE</code> methods.
+      <p/>
+      The endpoint enforces proper authentication and authorization mechanisms to ensure secure access to user resources, with error responses provided for unauthorized and forbidden actions.
+      <div class='note'>See the <a href='/api/#tag/Api-Token/paths/~1apiToken/post'>API token</a> section above for more details.</div>
+paths:
+  /apiToken:
+    post:
+      summary: Generate API token
+      operationId: postUser
+      description: >-
+        This endpoint allows you to generate an API token for authentication purposes.
+        API tokens serve as credentials to access protected resources within the system.<br/><br/>
+        <div class='note'>Remember to store the generated token securely. You can include it in subsequent requests for authentication.</div>
+        <p/>
+        <h3>Authorization header</h3>
+        The Authorization header is used to authenticate the client's request to the server.
+        It uses the <code>Basic</code> authentication scheme.<br/><br/>
+        Use the following format: <code>Basic ${secure_credentials}</code>.
+      x-codeSamples:
+        - lang: Bash
+          label: cURL
+          source: |
+            curl -X \
+            POST "https://api.this.cursive/v1"/apiToken -H 'Accept: application/json; version=v1' \
+            -H 'Organization: my-org-id' \
+            -H 'Authorization: Basic ${encoded_access_keys}'
+      tags:
+        - Api Token
+      servers:
+        - url: "https://api.this.cursive/v1"
+      security:
+        - apiKey: []
+      parameters:
+        - name: Organization ID
+          in: header
+          required: true
+          schema:
+            type: string
+            description: The ID of your Organization.
+            example: ORG-1234567890
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+            description: Base64-encoded string of the access key.
+            example: "Basic QWxhZGRpbjpPcGVuU2VzYW1l"
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiToken"
+          description: OK
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        429:
+          description: Too many requests
+  /users:
+    get:
+      summary: Get all users
+      operationId: getAllUsers
+      tags:
+        - Users
+      description: |
+        Hello
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      $ref: "#/components/schemas/User/properties/id"
+                    name:
+                      $ref: "#/components/schemas/User/properties/name"
+                    email:
+                      $ref: "#/components/schemas/User/properties/email"
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        429:
+          description: Too many requests
+    post:
+      summary: Create a new user
+      operationId: postNewUser
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  $ref: "#/components/schemas/User/properties/id"
+                name:
+                  $ref: "#/components/schemas/User/properties/name"
+                email:
+                  $ref: "#/components/schemas/User/properties/email"
+                role:
+                  $ref: "#/components/schemas/User/properties/role"
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X POST \
+              https://api.example.com/auth/token \
+              -H 'Content-Type: application/json' \
+              -d '{
+                "username": "your_username",
+                "password": "your_password"
+              }'
+      responses:
+        "201":
+          description: User created successfully
+        "400":
+          description: Bad request
+  /users/{userId}:
+    parameters:
+      - name: userId
+        in: path
+        description: ID of the user to retrieve
+        required: true
+        schema:
+          type: integer
+    get:
+      summary: Get user by ID
+      operationId: getUser
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    $ref: "#/components/schemas/User/properties/id"
+                  name:
+                    $ref: "#/components/schemas/User/properties/name"
+                  email:
+                    $ref: "#/components/schemas/User/properties/email"
+                  role:
+                    $ref: "#/components/schemas/User/properties/role"
+        "404":
+          description: User not found
+      x-code-samples:
+        - lang: Python
+          source: |
+            import requests
+
+            # Fetch all users
+            response = requests.get("https://api.this.cursive/v1"/users")
+            print(response.json())
+
+            # Create a new user
+            new_user = {"name": "John Doe", "email": "john@example.com"}
+            response = requests.post("https://api.this.cursive/v1"/users", json=new_user)
+            print(response.json())
+        - lang: JavaScript
+          source: |
+            const fetch = require('node-fetch');
+
+            // Fetch all users
+            fetch("https://api.this.cursive/v1"/users")
+              .then(response => response.json())
+              .then(data => console.log(data))
+              .catch(error => console.error('Error:', error));
+
+            // Create a new user
+            fetch("https://api.this.cursive/v1"/users", {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name: "John Doe", email: "john@example.com" })
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+
+        - lang: Java
+          source: |
+            import java.io.IOException;
+            import okhttp3.MediaType;
+            import okhttp3.OkHttpClient;
+            import okhttp3.Request;
+            import okhttp3.RequestBody;
+            import okhttp3.Response;
+
+            public class Main {
+                public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+                public static final OkHttpClient client = new OkHttpClient();
+
+                public static void main(String[] args) throws IOException {
+                    // Fetch all users
+                    Request request = new Request.Builder()
+                        .url("https://api.this.cursive/v1"/users")
+                        .build();
+
+                    try (Response response = client.newCall(request).execute()) {
+                        System.out.println(response.body().string());
+                    }
+
+                    // Create a new user
+                    String json = "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}";
+                    RequestBody body = RequestBody.create(json, JSON);
+                    Request postRequest = new Request.Builder()
+                        .url("https://api.this.cursive/v1"/users")
+                        .post(body)
+                        .build();
+
+                    try (Response response = client.newCall(postRequest).execute()) {
+                        System.out.println(response.body().string());
+                    }
+                }
+            }
+
+    put:
+      summary: Update user
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  $ref: "#/components/schemas/User/properties/id"
+                name:
+                  $ref: "#/components/schemas/User/properties/name"
+                email:
+                  $ref: "#/components/schemas/User/properties/email"
+                role:
+                  $ref: "#/components/schemas/User/properties/role"
+      responses:
+        "200":
+          description: User updated successfully
+        "404":
+          description: User not found
+    delete:
+      summary: Delete user
+      tags:
+        - Users
+      operationId: deleteUser
+      responses:
+        "204":
+          description: User deleted successfully
+        "404":
+          description: User not found
+      x-code-samples:
+        - lang: curl
+          source: |
+            curl -X DELETE \
+              "https://api.this.cursive/v1"/users/123 \
+              -H 'Authorization: Bearer <your_access_token>'
+        - lang: Python
+          source: |
+            import requests
+
+            # Delete user by ID
+            response = requests.delete("https://api.this.cursive/v1"/users/123")
+            if response.status_code == 204:
+                print("User deleted successfully")
+            elif response.status_code == 404:
+                print("User not found")
+            else:
+                print("Error:", response.status_code)
+components:
+  schemas:
+    ApiToken:
+      properties:
+        api_token:
+          type: string
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: >-
+            The unique identifier for the user. This follows the guidelines specified in
+            [RFC 7643](https://datatracker.ietf.org/doc/html/rfc7643). Example: <code>e9e30dba-f08f-4b69-9d3a-8d97c8360b19</code>
+        name:
+          type: string
+          maxLength: 63
+          description: The unique name of the user. The value for the <code>name</code> field follows the guidelines specified in [DNS RFC 1123](https://datatracker.ietf.org/doc/html/rfc1123). Example&#58; <code>user-name</code>
+        email:
+          type: string
+          pattern: your-email@email.com
+          format: email
+          description: The email address of the user.
+        role:
+          type: string
+          enum:
+            - Admin
+            - User
+            - Viewer
+          description: The role of the user.
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+  - apiKey: []
+x-code-samples:
+  - lang: python
+    source: |
+      import requests
+
+      # Fetch all users
+      response = requests.get("https://api.this.cursive/v1"/users")
+      print(response.json())
+
+      # Create a new user
+      new_user = {"name": "John Doe", "email": "john@example.com"}
+      response = requests.post("https://api.this.cursive/v1"/users", json=new_user)
+      print(response.json())

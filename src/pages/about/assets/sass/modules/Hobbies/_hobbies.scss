@@ -1,0 +1,32 @@
+.hobbiesSc {
+    margin-bottom: 40px;
+    .hobbiesContent {
+        padding-bottom: 20px;
+        position: relative;
+
+        & > .dotsShape {
+            position: absolute;
+            left: -10px;
+            bottom: 0;
+            top: 4px;
+        }
+    }
+    .hobbiesList {
+        padding: 16px 0;
+        margin-left: 24px;
+        column-gap: 40px;
+    }
+    .hobbiesItem {
+        column-gap: 10px;
+        padding: 12px 0;
+    }
+    .hobbiesIcon {
+        color: $mauve;
+        max-width: 40px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hobbiesText {
+        margin-top: 6px;
+    }
+}

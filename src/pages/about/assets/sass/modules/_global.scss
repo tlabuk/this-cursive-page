@@ -1,0 +1,84 @@
+// global stylings
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media(max-width: 992px) {
+        padding: 0 1rem;
+    }
+}
+
+.pageContainer {
+    overflow-x: hidden!important;
+    background: #32353b;
+    font-family: $font-primary;
+    
+    ul {
+      list-style-type: none;
+    }
+
+    h1 h2 h3 h4 h5 {
+        color: #fff !important;
+    }
+    a:hover {
+        color: $link-hover !important;
+    }
+}
+
+.dottedBorderLeft {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $payne-gray;
+    }
+}
+
+.dotsShape {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #262833;
+    position: relative;
+    z-index: 1;
+    top: -10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        background-color: $mauve;
+        border-radius: 100%;
+    }
+}
+
+.diamondShapesGroup {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    img {
+        width: 20px;
+        margin-left: -8px;
+    }
+}
+
+.resumeBlock {
+    div[class*="-list"] {
+        margin-left: 16px;
+        row-gap: 0;
+
+        @media(max-width: 576px) {
+            padding: 8px 0;
+        }
+    }
+}

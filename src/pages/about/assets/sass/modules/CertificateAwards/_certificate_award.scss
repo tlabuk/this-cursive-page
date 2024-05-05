@@ -1,0 +1,38 @@
+.certAwardSc {
+  .certAwardList {
+    gap: 12px;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 24px;
+    padding: 16px 0;
+  }
+  .certAwardIcon {
+    width: 40px;
+  }
+  .certAwardItem {
+    column-gap: 16px;
+    grid-template-columns: 40px auto;
+    margin: 12px 0;
+  }
+  .certAwardProvider {
+    color: $gray;
+    font-weight: 500;
+  }
+  .certAwardCourse {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .certAwardInfo {
+    grid-template-columns: 2fr 1fr;
+    @media (max-width: 768px) {
+      grid-template-columns: 100%;
+    }
+  }
+  .certAwardInfoR {
+    color: $gray;
+    font-size: 15px;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+}
