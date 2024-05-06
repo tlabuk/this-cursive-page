@@ -1,20 +1,3 @@
-
-import SkillCss from "../assets/images/skill_css.png";
-import SkillFigma from "../assets/images/skill_figma.png";
-import SkillHtml5 from "../assets/images/skill_html5.png";
-import SkillPhotoshop from "../assets/images/skill_photoshop.png";
-import SkillSketch from "../assets/images/skill_sketch.png";
-import SkillTrello from "../assets/images/skill_trello.png";
-import SkillWireframe from "../assets/images/skill_wireframe.png";
-import SkillXd from "../assets/images/skill_xd.png";
-import Udemy from "../assets/images/udemy.png";
-import Coursera from "../assets/images/coursera.png";
-import Google from "../assets/images/google.png";
-import Reading from "../assets/images/reading.png";
-import Travelling from "../assets/images/travelling.png";
-import Blogging from "../assets/images/blogging.png";
-import Gaming from "../assets/images/gaming.png";
-
 const DATA = {
   professionalExperiences: [
     {
@@ -186,49 +169,49 @@ const DATA = {
   skills: [
     {
       id: "skill_1",
-      icon: SkillFigma,
+      icon: '/img/about/skill_figma.png',
       name: "Figma",
       description: "UI Design, Protoyping",
     },
     {
       id: "skill_2",
-      icon: SkillHtml5,
+      icon: "/img/about/skill_html5.png",
       name: "HTML5",
       description: "Hypertext Markup",
     },
     {
       id: "skill_3",
-      icon: SkillCss,
+      icon: "/img/about/skill_css.png",
       name: "CSS",
       description: "Attractive Design & Frameworks",
     },
     {
       id: "skill_4",
-      icon: SkillPhotoshop,
+      icon: "/img/about/skill_photoshop.png",
       name: "Adobe Photoshop",
       description: "Picture Edit & Transformation",
     },
     {
       id: "skill_5",
-      icon: SkillSketch,
+      icon: "/img/about/skill_sketch.png",
       name: "Sketch",
       description: "UI Design & Prototyping",
     },
     {
       id: "skill_6",
-      icon: SkillTrello,
+      icon: "/img/about/skill_trello.png",
       name: "Trello",
       description: "Project Management Knowledge",
     },
     {
       id: "skill_7",
-      icon: SkillWireframe,
+      icon: "/img/about/skill_wireframe.png",
       name: "Wireframing",
       description: "Creating wireframes prior to design",
     },
     {
       id: "skill_8",
-      icon: SkillXd,
+      icon: "/img/about/skill_xd.png",
       name: "Adobe XD",
       description: "Adobe Tool for UI Design",
     },
@@ -236,7 +219,7 @@ const DATA = {
   certificatesAndAwards: [
     {
       id: "cert_award_1",
-      icon: Coursera,
+      icon: "/img/about/coursera.png",
       provider: "Coursera",
       course: "UI/UX Advance Course",
       startDate: "Dec 2021",
@@ -244,7 +227,7 @@ const DATA = {
     },
     {
       id: "cert_award_2",
-      icon: Google,
+      icon: "/img/about/google.png",
       provider: "Google",
       course: "Google UX Design Professional Certificate",
       startDate: "Mar 2021",
@@ -252,7 +235,7 @@ const DATA = {
     },
     {
       id: "cert_award_3",
-      icon: Udemy,
+      icon: "/img/about/udemy.png",
       provider: "Udemy",
       course: "Fundamental of UI/UX for Students",
       startDate: "Jun 2020",
@@ -262,22 +245,22 @@ const DATA = {
   hobbiesAndInterests: [
     {
       id: "hob_1",
-      icon: Gaming,
+      icon: "/img/about/gaming.png",
       name: "Gaming",
     },
     {
       id: "hob_2",
-      icon: Reading,
+      icon: "/img/about/reading.png",
       name: "Reading",
     },
     {
       id: "hob_3",
-      icon: Travelling,
+      icon: "/img/about/travelling.png",
       name: "Travelling",
     },
     {
       id: "hob_4",
-      icon: Blogging,
+      icon: "/img/about/blogging.png",
       name: "Blogging",
     },
   ],
