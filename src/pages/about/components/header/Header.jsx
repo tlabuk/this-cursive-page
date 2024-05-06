@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
-import { AvatarPNG } from "../../assets/image";
 import {
   AiFillLinkedin,
   AiFillGoogleCircle,
   AiFillGithub,
-  AiFillIdcard,
   AiFillMail,
   AiFillPhone,
   AiFillEnvironment,
   AiOutlineLink,
 } from "react-icons/ai";
 import { SiAcademia } from "react-icons/si";
-import { FaEnvelope, FaLink, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { FaLink } from "react-icons/fa6";
 import styles from "../../assets/sass/style.module.scss";
 
 const Header = () => {

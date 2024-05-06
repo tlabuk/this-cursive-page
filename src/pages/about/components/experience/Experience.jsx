@@ -3,13 +3,6 @@ import { MdWorkHistory } from "react-icons/md";
 import DATA from "../../constant/mockData";
 import Title from "../common/Title";
 import PropTypes from "prop-types";
-import {
-  DiamondLgBlue,
-  DiamondLgGreen,
-  DiamondLgOrange,
-  DiamondLgPink,
-  DiamondLgYellow,
-} from "../../assets/image";
 import styles from "../../assets/sass/style.module.scss";
 
 const Experience = () => {
@@ -34,20 +27,6 @@ const Experience = () => {
 export default Experience;
 
 const ExperienceItem = ({ item }) => {
-  const showDiamondImage = (color) => {
-    if (color === "Blue") {
-      return DiamondLgBlue;
-    } else if (color === "Green") {
-      return DiamondLgGreen;
-    } else if (color === "Orange") {
-      return DiamondLgOrange;
-    } else if (color === "Pink") {
-      return DiamondLgPink;
-    } else if (color === "Yellow") {
-      return DiamondLgYellow;
-    }
-  };
-
   return (
     <div
       className={`${styles.experienceItem} ${styles.text__White}`}
@@ -64,11 +43,6 @@ const ExperienceItem = ({ item }) => {
         className={`${styles.expPosition} ${styles.flex} ${styles.items__Center} ${styles.flex__Wrap} ${styles.text__White}`}
       >
         <p className={styles.expPositionText}>{item.position}</p>
-        <div className={styles.diamondShapesGroup}>
-          {item.diamondColors?.map((color, index) => (
-            <img key={index} src={showDiamondImage(color)} alt="" />
-          ))}
-        </div>
       </div>
       <div
         className={`${styles.expCompany} ${styles.flex} ${styles.items__Center} ${styles.flex__Wrap}`}
