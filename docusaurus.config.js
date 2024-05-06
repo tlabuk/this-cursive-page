@@ -11,9 +11,7 @@ const config = {
   title: 'This.cursive | Expert technical writing',
   tagline: 'Discourse rules all',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://tlabuk.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -21,8 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'labtom', // Usually your GitHub org/user name.
-  projectName: 'this.cursive', // Usually your repo name.
-
+  projectName: 'this-cursive-page', // Usually your repo name.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {

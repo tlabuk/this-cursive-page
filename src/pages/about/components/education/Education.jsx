@@ -35,8 +35,10 @@ const EducationItem = ({ item }) => {
         <h3 className={styles.eduCourse}>{item.course}</h3>
       </div>
       <p className={`${styles.eduInfo} ${styles.text}`}>
-        {item.institution}, {item.startDate} - {item.endDate || "Present"}
-        {""}({item.degree && `${item.degree}`})
+        {item.institution},<br /> {item.startDate} - {item.endDate || "Present"}
+        {""}
+        <br />
+        <i>({item.degree && `${item.degree}`})</i>
       </p>
     </div>
   );
