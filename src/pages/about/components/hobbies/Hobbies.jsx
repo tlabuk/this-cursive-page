@@ -1,28 +1,26 @@
 import PropTypes from "prop-types";
 import Title from "../common/Title";
 import styles from "../../assets/sass/style.module.scss";
+import Gaming from "/img/about/gaming.png";
+import Reading from "/img/about/reading.png";
+import Travelling from "/img/about/travelling.png";
 
 const Hobbies = () => {
   const hobbiesData = [
     {
       id: "hob_1",
-      icon: "/img/about/gaming.png",
+      icon: Gaming,
       name: "Gaming",
     },
     {
       id: "hob_2",
-      icon: "/img/about/reading.png",
+      icon: Reading,
       name: "Reading",
     },
     {
       id: "hob_3",
-      icon: "/img/about/travelling.png",
+      icon: Travelling,
       name: "Travelling",
-    },
-    {
-      id: "hob_4",
-      icon: "/img/about/blogging.png",
-      name: "Blogging",
     },
   ];
 

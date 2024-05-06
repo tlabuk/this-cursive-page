@@ -21,8 +21,9 @@
     --note-border-color: rgba(231, 230, 230, 0.924);
     --note-box-shadow: #dddddda5;
     --inline-code-bg-color: rgba(38, 50, 56, 0.05);
-    
-    & [data-theme='dark'] {
+}
+
+[data-theme='dark'] {
         --ifm-color-primary: #b18306e8;
         --ifm-color-primary-dark: #e4aa08;
         --ifm-color-primary-darker: #d8a107;
@@ -43,4 +44,3 @@
         --note-box-shadow: #2e3e46;
         --inline-code-bg-color: rgba(66, 73, 76, 0.529);
     }
-}
