@@ -1,10 +1,44 @@
-import DATA from "../../constant/mockData";
 import Title from "../common/Title";
 import PropTypes from "prop-types";
 import styles from "../../assets/sass/style.module.scss";
 import { IoSchoolSharp } from "react-icons/io5";
 
 const Education = () => {
+  const educationalExperiences = [
+    {
+      id: "edu_1",
+      course: "Ph.D. studies",
+      institution: "University of Silesia",
+      degree: "Doctor of Philosophy (Ph.D.) with honors",
+      startDate: "Oct 2014",
+      endDate: "Oct 2019",
+    },
+    {
+      id: "edu_2",
+      course: "Classical philology (post-grad)",
+      institution: "Jagiellonian University",
+      degree: "Master's degree",
+      startDate: "Oct 2010",
+      endDate: "Jul 2014",
+    },
+    {
+      id: "edu_3",
+      course: "Classical philology (undergrad)",
+      institution: "Jagiellonian University",
+      degree: "Bachelor's degree",
+      startDate: "Oct 2008",
+      endDate: "Jul 2010",
+    },
+    {
+      id: "edu_4",
+      course: "Unergraduate studies: Arts Omnibus",
+      institution: "University Colege Dublin",
+      degree: "n/a",
+      startDate: "2006",
+      endDate: "2008",
+    },
+  ];
+
   return (
     <div className={`${styles.educationSc} ${styles.resumeBlock}`}>
       <div className={styles.container}>
@@ -13,7 +47,7 @@ const Education = () => {
         >
           <Title titleText={"Education"} />
           <div className={`${styles.educationList} ${styles.grid}`}>
-            {DATA.educationalExperiences?.map((item) => (
+            {educationalExperiences?.map((item) => (
               <EducationItem key={item.id} item={item} />
             ))}
           </div>

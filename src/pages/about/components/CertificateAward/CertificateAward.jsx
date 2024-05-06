@@ -1,9 +1,34 @@
-import DATA from "../../constant/mockData";
 import Title from "../common/Title";
 import PropTypes from "prop-types";
 import styles from "../../assets/sass/style.module.scss";
 
 const CertificateAward = () => {
+  const certificateData = [
+    {
+      id: "cert_award_1",
+      icon: "/img/about/coursera.png",
+      provider: "Coursera",
+      course: "UI/UX Advance Course",
+      startDate: "Dec 2021",
+      endDate: "Feb 2022",
+    },
+    {
+      id: "cert_award_2",
+      icon: "/img/about/google.png",
+      provider: "Google",
+      course: "Google UX Design Professional Certificate",
+      startDate: "Mar 2021",
+      endDate: "Jun 2021",
+    },
+    {
+      id: "cert_award_3",
+      icon: "/img/about/udemy.png",
+      provider: "Udemy",
+      course: "Fundamental of UI/UX for Students",
+      startDate: "Jun 2020",
+      endDate: "Sept 2020",
+    },
+  ];
   return (
     <div className={`${styles.certAwardSc} ${styles.resumeBlock}`}>
       <div className={styles.container}>
@@ -12,7 +37,7 @@ const CertificateAward = () => {
         >
           <Title titleText={"Certificates & Awards"} />
           <div className={`${styles.certAwardList} ${styles.grid}`}>
-            {DATA.certificatesAndAwards?.map((item) => (
+            {certificateData.map((item) => (
               <CertificateAwardItem key={item.id} item={item} />
             ))}
           </div>

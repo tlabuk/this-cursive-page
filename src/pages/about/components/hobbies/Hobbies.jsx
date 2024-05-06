@@ -1,9 +1,31 @@
 import PropTypes from "prop-types";
 import Title from "../common/Title";
-import DATA from "../../constant/mockData";
 import styles from "../../assets/sass/style.module.scss";
 
 const Hobbies = () => {
+  const hobbiesData = [
+    {
+      id: "hob_1",
+      icon: "/img/about/gaming.png",
+      name: "Gaming",
+    },
+    {
+      id: "hob_2",
+      icon: "/img/about/reading.png",
+      name: "Reading",
+    },
+    {
+      id: "hob_3",
+      icon: "/img/about/travelling.png",
+      name: "Travelling",
+    },
+    {
+      id: "hob_4",
+      icon: "/img/about/blogging.png",
+      name: "Blogging",
+    },
+  ];
+
   return (
     <div className={`${styles.hobbiesSc} ${styles.resumeBlock}`}>
       <div className={styles.container}>
@@ -12,7 +34,7 @@ const Hobbies = () => {
           <div
             className={`${styles.hobbiesList} ${styles.flex} ${styles.items__Center} ${styles.flex__Wrap}`}
           >
-            {DATA.hobbiesAndInterests?.map((item) => (
+            {hobbiesData?.map((item) => (
               <HobbiesItem key={item.id} item={item} />
             ))}
           </div>
