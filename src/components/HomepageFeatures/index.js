@@ -17,7 +17,7 @@ const FeatureList = [
   },
   {
     title: 'API documentation',
-    href: '/api/',
+    href: '/this-cursive-page/api/',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
