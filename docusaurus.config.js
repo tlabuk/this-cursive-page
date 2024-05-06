@@ -55,7 +55,7 @@ const config = {
         specs: [
           {
             spec: 'openapi/index.yaml',
-            route: '/api/',
+            route: '/this-cursive-page/api/',
           },
         ],
         theme: {
