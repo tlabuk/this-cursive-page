@@ -29,7 +29,7 @@ const SkillItem = ({ item }) => {
       key={item.id}
     >
       <div className={styles.skillIcon}>
-        <img src={item.icon} alt="" />
+        <img src={item.icon} alt={item.name} />
       </div>
       <div className={styles.skillInfo}>
         <h3 className={styles.skillName}>{item.name}</h3>
@@ -44,7 +44,6 @@ const SkillItem = ({ item }) => {
 SkillItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    icon: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }),
