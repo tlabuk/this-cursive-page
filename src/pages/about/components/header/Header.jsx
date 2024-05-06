@@ -23,7 +23,11 @@ const Header = () => {
             <div
               className={`${styles.flex} ${styles.items__End} ${styles.headerIntroWrapper}`}
             >
-              <img src={FaLink} alt="avatar" className={`${styles.avatar}`} />
+              <img
+                src="/img/about/avatar.png"
+                alt="avatar"
+                className={styles.avatar}
+              />
               <h1 className={`${styles.headerName} ${styles.text__Mauve}`}>
                 Tomasz Labuk, PhD, <br /> Senior technical writer
               </h1>
