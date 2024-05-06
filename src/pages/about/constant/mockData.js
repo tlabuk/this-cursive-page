@@ -1,29 +1,19 @@
-import {
-  Blogging,
-  CompanyLogo1,
-  CompanyLogo2,
-  CompanyLogo3,
-  CompanyLogo4,
-  Coursera,
-  DiamondLgBlue,
-  DiamondLgGreen,
-  DiamondLgOrange,
-  DiamondLgPink,
-  DiamondLgYellow,
-  Gaming,
-  Google,
-  Reading,
-  SkillCss,
-  SkillFigma,
-  SkillHtml5,
-  SkillPhotoshop,
-  SkillSketch,
-  SkillTrello,
-  SkillWireframe,
-  SkillXd,
-  Travelling,
-  Udemy,
-} from "../assets/image";
+
+import SkillCss from "../assets/images/skill_css.png";
+import SkillFigma from "../assets/images/skill_figma.png";
+import SkillHtml5 from "../assets/images/skill_html5.png";
+import SkillPhotoshop from "../assets/images/skill_photoshop.png";
+import SkillSketch from "../assets/images/skill_sketch.png";
+import SkillTrello from "../assets/images/skill_trello.png";
+import SkillWireframe from "../assets/images/skill_wireframe.png";
+import SkillXd from "../assets/images/skill_xd.png";
+import Udemy from "../assets/images/udemy.png";
+import Coursera from "../assets/images/coursera.png";
+import Google from "../assets/images/google.png";
+import Reading from "../assets/images/reading.png";
+import Travelling from "../assets/images/travelling.png";
+import Blogging from "../assets/images/blogging.png";
+import Gaming from "../assets/images/gaming.png";
 
 const DATA = {
   professionalExperiences: [
