@@ -31,9 +31,9 @@ const Education = () => {
     },
     {
       id: "edu_4",
-      course: "Unergraduate studies: Arts Omnibus",
+      course: "Arts Omnibus: Philosophy & Classics",
       institution: "University Colege Dublin",
-      degree: "n/a",
+      degree: "",
       startDate: "2006",
       endDate: "2008",
     },
@@ -72,7 +72,7 @@ const EducationItem = ({ item }) => {
         {item.institution},<br /> {item.startDate} - {item.endDate || "Present"}
         {""}
         <br />
-        <i>({item.degree && `${item.degree}`})</i>
+        <i>{item.degree && `${item.degree}`}</i>
       </p>
     </div>
   );

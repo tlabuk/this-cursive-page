@@ -127,7 +127,7 @@ paths:
                   $ref: "#/components/schemas/User/properties/email"
                 role:
                   $ref: "#/components/schemas/User/properties/role"
-      x-code-samples:
+      x-codeSamples:
         - lang: curl
           source: |
             curl -X POST \
@@ -173,7 +173,7 @@ paths:
                     $ref: "#/components/schemas/User/properties/role"
         "404":
           description: User not found
-      x-code-samples:
+      x-codeSamples:
         - lang: Python
           source: |
             import requests
@@ -277,7 +277,7 @@ paths:
           description: User deleted successfully
         "404":
           description: User not found
-      x-code-samples:
+      x-codeSamples:
         - lang: curl
           source: |
             curl -X DELETE \
@@ -332,7 +332,7 @@ components:
       name: Authorization
 security:
   - apiKey: []
-x-code-samples:
+x-codeSamples:
   - lang: python
     source: |
       import requests

@@ -8,11 +8,22 @@ import {
   AiFillEnvironment,
   AiOutlineLink,
 } from "react-icons/ai";
+import Avatar from "/static/img/about/avatar.png";
 import { SiAcademia } from "react-icons/si";
-import { FaLink } from "react-icons/fa6";
 import styles from "../../assets/sass/style.module.scss";
 
 const Header = () => {
+  const headerData = [
+    {
+      name: "Tomasz Labuk, Ph.D., <br/> Senior Technical Writer",
+      lead: "Even the best piece of code can prove to be useless when it is not documented well enough. In the so-called age of UX, user experience is not a commodity, but a staple of every software product. And surely, good technical documentation is one of the founding pillars of UX. Drawing from my international academic background and experience in technical writing for Deep Tech innovations, I blend these with front-end technology knowledge to create comprehensive software documentation that enhances userexperience.",
+      email: "this.cursive@gmail.com",
+      phone: "+48 000 000 000",
+      address: "Kraków, Poland",
+      website: "https://tlabuk.github.io/this-cursive-page/",
+    },
+  ];
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -23,28 +34,16 @@ const Header = () => {
             <div
               className={`${styles.flex} ${styles.items__End} ${styles.headerIntroWrapper}`}
             >
-              <img
-                src="/img/about/avatar.png"
-                alt="avatar"
-                className={styles.avatar}
-              />
-              <h1 className={`${styles.headerName} ${styles.text__Mauve}`}>
-                Tomasz Labuk, PhD, <br /> Senior technical writer
-              </h1>
+              <img src={Avatar} alt="avatar" className={styles.avatar} />
+              <h1
+                className={`${styles.headerName} ${styles.text__Mauve}`}
+                dangerouslySetInnerHTML={{ __html: headerData[0].name }}
+              ></h1>
             </div>
             <p
               className={`${styles.headerText} ${styles.text} ${styles.text__White}`}
             >
-              Even the best piece of code can prove to be useless when it is not
-              documented well enough. In the so-called "age of UX", user
-              experience is not a commodity, but a staple of every software
-              product. And surely, good technical documentation is one of the
-              founding pillars of UX. In my work, I leverage my international
-              academic background, expertise in technical writing for complex
-              innovations in Deep Tech, and knowledge of front-end technologies.
-              I combine them with a flair for coding & complex problem-solving
-              skills to develop superb technical content and tools for holistic
-              software documentation.
+              {headerData[0].lead}
             </p>
           </div>
 
@@ -60,7 +59,7 @@ const Header = () => {
                 </span>
                 <p className={styles.infoItem__Text}>
                   Email:{" "}
-                  <span className={styles.text}>this.cursive@gmail.com</span>
+                  <span className={styles.text}>{headerData[0].email}</span>
                 </p>
               </li>
               <li
@@ -70,7 +69,8 @@ const Header = () => {
                   <AiFillPhone size={13} />
                 </span>
                 <p className={styles.infoItem__Text}>
-                  Phone: <span className={styles.text}>+48 000 000 000</span>
+                  Phone:{" "}
+                  <span className={styles.text}>{headerData[0].phone}</span>
                 </p>
               </li>
               <li
@@ -80,7 +80,8 @@ const Header = () => {
                   <AiFillEnvironment size={14} />
                 </span>
                 <p className={styles.infoItem__Text}>
-                  Address: <span className={styles.text}>Kraków, Poland</span>
+                  Address:{" "}
+                  <span className={styles.text}>{headerData[0].address}</span>
                 </p>
               </li>
               <li
@@ -91,7 +92,7 @@ const Header = () => {
                 </span>
                 <p className={styles.infoItem__Text}>
                   Website:{" "}
-                  <span className={styles.text}>https://this-cursive.io/</span>
+                  <span className={styles.text}>{headerData[0].website}</span>
                 </p>
               </li>
             </ul>
