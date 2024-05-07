@@ -81,7 +81,8 @@ const config = {
           {
             to: '/',
             label: 'Home',
-            position: 'left'
+            position: 'left',
+            activeBaseRegex: '^/this-cursive-page/$',
           },
           {
             to: '/about/bio',
@@ -89,8 +90,8 @@ const config = {
             position: 'left',
           },
           {
-            to: '/markdown-page',
-            label: 'My work',
+            to: '/this-cursive-page/api/',
+            label: 'Dummy docs',
             position: 'left',
           },
         ],
@@ -98,15 +99,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
           {
             title: 'Community',
             items: [
