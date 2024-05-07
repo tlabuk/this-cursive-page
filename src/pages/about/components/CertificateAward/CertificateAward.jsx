@@ -1,32 +1,53 @@
 import Title from "../common/Title";
 import PropTypes from "prop-types";
 import styles from "../../assets/sass/style.module.scss";
+import Agile from "/static/img/about/agile.png";
+import FrontEnd from "/static/img/about/front-end.png";
+import Certificate from "/static/img/about/certificate.png";
+import NUI from "/static/img/about/nui.png";
+import FreieLogo from "/static/img/about/freie-logo.png";
 
 const CertificateAward = () => {
   const certificateData = [
     {
       id: "cert_award_1",
-      icon: "/img/about/coursera.png",
-      provider: "Coursera",
-      course: "UI/UX Advance Course",
-      startDate: "Dec 2021",
-      endDate: "Feb 2022",
+      icon: Agile,
+      provider: "APMG international",
+      course: "Agile PM foundation",
+      description:
+        "<a href='https://www.credly.com/badges/1900cbde-5497-48c6-a473-b68818c421fd/linked_in_profile'>Badge</a>",
+      startDate: "Apr 2019",
+      endDate: "Apr 2019",
     },
     {
       id: "cert_award_2",
-      icon: "/img/about/google.png",
-      provider: "Google",
-      course: "Google UX Design Professional Certificate",
-      startDate: "Mar 2021",
-      endDate: "Jun 2021",
+      icon: FrontEnd,
+      provider: "Web-coders.pl",
+      course: "Front-end developers course",
+      description:
+        "160 hours total. Learnt technologies: CSS, SCSS, BEM, JavaScript, TypeScript, FetchAPI, RestAPI",
+      startDate: "Feb 2022",
+      endDate: "Jun 2022",
     },
     {
       id: "cert_award_3",
-      icon: "/img/about/udemy.png",
-      provider: "Udemy",
-      course: "Fundamental of UI/UX for Students",
-      startDate: "Jun 2020",
-      endDate: "Sept 2020",
+      icon: NUI,
+      provider: "National University of Ireland",
+      course: "3rd prize in the dr H.H. Stweart literary scholarship in Latin",
+      description:
+        "Awarded by National University of Ireland and University College Dublin",
+      startDate: "Nov 2007",
+      endDate: "Nov 2007",
+    },
+    {
+      id: "cert_award_4",
+      icon: FreieLogo,
+      provider: "Freie Universität Berlin",
+      course: "Research Stay with Alumni Programme at Freie Universität Berlin",
+      description:
+        "Two-month research stay awarded for scholarly projacts led by doctoral students",
+      startDate: "Sep 2015",
+      endDate: "Oct 2015",
     },
   ];
   return (
@@ -60,7 +81,14 @@ const CertificateAwardItem = ({ item }) => {
       <div className={`${styles.certAwardInfo} ${styles.grid}`}>
         <div className={styles.certAwardInfoL}>
           <p className={styles.certAwardProvider}>{item.provider}</p>
-          <h3 className={styles.certAwardCourse}>{item.course}</h3>
+          <h3
+            className={styles.certAwardCourse}
+            dangerouslySetInnerHTML={{ __html: item.course }}
+          />
+          <div
+            className={styles.certAwardDescription}
+            dangerouslySetInnerHTML={{ __html: item.description }}
+          />
         </div>
         <div
           className={`${styles.certAwardInfoR} ${styles.flex} ${styles.items__Center} ${styles.justify__End}`}

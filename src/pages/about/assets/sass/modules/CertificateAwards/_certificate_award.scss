@@ -22,6 +22,14 @@
     font-weight: 600;
     font-size: 16px;
   }
+  .certAwardDescription {
+    font-size: 14px;
+    margin-top: -10px;
+    a {
+      color: #e4aa08;
+      text-decoration: underline;
+    }
+  }
   .certAwardInfo {
     grid-template-columns: 2fr 1fr;
     @media (max-width: 768px) {
