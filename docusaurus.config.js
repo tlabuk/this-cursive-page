@@ -117,12 +117,32 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Other places',
             items: [
               {
-                label: 'GitHub',
-                href: '/',
+                html:
+                  `
+                    <a href="https://www.linkedin.com/in/tomasz-labuk/" target="_blank" rel="noreferrer noopener">
+                      <img src="img/footer/linkedin-icon.svg" alt="Deploys by Netlify" width="20" height="20" />
+                    </a>
+                  `
               },
+              {
+                html:
+                  `
+                  <a href="https://independent.academia.edu/TomaszLabuk" target="_blank" rel="noreferrer noopener">
+                    <img src="img/footer/academia-logo.svg" width="20" height="20">
+                  </a>
+                `
+              },
+              {
+                html:
+                  `
+                  <a href="https://github.com/tlabuk" target="_blank" rel="noreferrer noopener">
+                    <img src="img/footer/github-icon.svg" width="20" height="20">
+                  </a>
+                `
+              }
             ],
           },
         ],

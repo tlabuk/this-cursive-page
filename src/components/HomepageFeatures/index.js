@@ -8,7 +8,7 @@ const FeatureList = [
   {
     title: 'Technical documentation for Nobl9',
     href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/homepage/folder.svg').default,
     description: (
       <>
         Nobl9 is the first SLO platform that ensures monitoring of software projects. I’m a major contributor to Nobl9 documentation and web developer of documentation tools.
@@ -18,7 +18,7 @@ const FeatureList = [
   {
     title: 'API documentation',
     href: '/this-cursive-page/api/',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/homepage/api.svg').default,
     description: (
       <>
 
@@ -29,7 +29,7 @@ const FeatureList = [
   {
     title: 'Fungal computers',
     href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/homepage/idea.svg').default,
     description: (
       <>
         Fungi are one of the oldest organisms on the Earth. They connect forests into one intelligent organism through their mycelial cells. Could we make computer hardware out of them?
@@ -39,7 +39,7 @@ const FeatureList = [
   {
     title: 'Intelligible AI',
     href: 'https://www.davincilabs.eu/downloads/The_Codex_Q3_2021.pdf',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/homepage/ai.svg').default,
     description: (
       <>
         Our expectations towards the transformative potential of AI are extremely high. To fully harness it, we need to understand complexities AI algorithms. How can we achieve that?
@@ -49,7 +49,7 @@ const FeatureList = [
   {
     title: 'Federated Machine Learning',
     href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/homepage/web.svg').default,
     description: (
       <>
         While Intelligence of AI is of extremely limited sort, algorithms govern every aspect of our lives, from content on social media, to industry. Can FL improve how AI works?

@@ -100,7 +100,7 @@ const Header = () => {
               className={`${styles.contactSocialList} ${styles.flex} ${styles.items__Center}`}
             >
               <li className={styles.socialItem}>
-                <Link to="/">
+                <Link to="https://independent.academia.edu/TomaszLabuk">
                   <SiAcademia size={20} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Academia
@@ -108,7 +108,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className={styles.socialItem}>
-                <Link to="/">
+                <Link to="https://www.linkedin.com/in/tomasz-labuk/">
                   <AiFillLinkedin size={25} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Linkedin
