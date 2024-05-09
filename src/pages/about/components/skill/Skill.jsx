@@ -4,19 +4,19 @@ import PropTypes from "prop-types";
 import styles from "../../assets/sass/style.module.scss";
 import skillCss from "/static/img/about/skill_css.png";
 import skillHtml from "/static/img/about/skill_html5.png";
-import skillFigma from "/static/img/about/skill_figma.png";
-import skillPhotoshop from "/static/img/about/skill_photoshop.png";
-import skillTrello from "/static/img/about/skill_trello.png";
-import skillSketch from "/static/img/about/skill_sketch.png";
+import skillVsc from "/static/img/about/skill_vsc.png";
+import skillApi from "/static/img/about/skill_api.png";
 import skillWireframe from "/static/img/about/skill_wireframe.png";
-import skillXd from "/static/img/about/skill_xd.png";
+import skillReact from "/static/img/about/skill_react.png";
+import skillJs from "/static/img/about/skill_js.png";
+import skillGit from "/static/img/about/skill_github.png";
 
 const skillsData = [
   {
     id: "skill_1",
-    icon: skillFigma,
-    name: "Figma",
-    description: "UI Design, Protoyping",
+    icon: skillReact,
+    name: "React.js",
+    description: "Web development in React",
   },
   {
     id: "skill_2",
@@ -32,33 +32,33 @@ const skillsData = [
   },
   {
     id: "skill_4",
-    icon: skillPhotoshop,
-    name: "Adobe Photoshop",
-    description: "Picture Edit & Transformation",
+    icon: skillJs,
+    name: "JavaScript",
+    description: "Web development in JavaScript",
   },
   {
     id: "skill_5",
-    icon: skillSketch,
-    name: "Sketch",
-    description: "UI Design & Prototyping",
+    icon: skillGit,
+    name: "GitHub",
+    description: "Advanced GitHub concepts",
   },
   {
     id: "skill_6",
-    icon: skillTrello,
-    name: "Trello",
-    description: "Project Management Knowledge",
+    icon: skillApi,
+    name: "API documentation",
+    description: "Creating and developing API documentation",
   },
   {
     id: "skill_7",
     icon: skillWireframe,
-    name: "Wireframing",
-    description: "Creating wireframes prior to design",
+    name: "Technical writing",
+    description: "Complex technical writing",
   },
   {
     id: "skill_8",
-    icon: skillXd,
-    name: "Adobe XD",
-    description: "Adobe Tool for UI Design",
+    icon: skillVsc,
+    name: "Visual Studio Code",
+    description: "Editing & managing code in VSC, developing custom extensions",
   },
 ];
 
@@ -94,7 +94,9 @@ const SkillItem = ({ item }) => {
       </div>
       <div className={styles.skillInfo}>
         <h3 className={styles.skillName}>{item.name}</h3>
-        <p className={`${styles.skillDescription} ${styles.text}`}>
+        <p
+          className={`${styles.skillDescription} ${styles.text} ${styles.text__Center}`}
+        >
           {item.description}
         </p>
       </div>
