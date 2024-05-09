@@ -67,7 +67,7 @@ function Feature({ Svg, title, description, href }) {
         <Svg className={styles.featureSvg} role="img" />
       </div>
       <div className="padding-horiz--md">
-        <Heading as="h3" className="text--center">{title}</Heading>
+        <Heading as="h3" className="text--center m-top">{title}</Heading>
         <p>{description}</p>
         <ReadMoreButton href={href} />
       </div>

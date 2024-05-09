@@ -20,10 +20,6 @@
         .navbar__inner {
             display: none !important;
         }
-        .hero__title {
-            font-size: 44px !important;
-            font-weight: normal;
-        }
         flex-direction: column-reverse;
         justify-content: left;
         align-items: left;
@@ -31,7 +27,8 @@
 
         .column__hero {
             width: 90% !important;
-            margin: 10%;
+            margin: 5%;
+
         }
     }
 }
@@ -49,6 +46,9 @@
     text-align: left;
     font-weight: bold;
     flex-shrink: 0;
+    @media screen and (max-width: 996px) {
+        font-size: 26px !important;
+    }
 }
 
 .hero__subtitle {
@@ -79,5 +79,18 @@
     @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: #f7ba0f; }
+    }
+
+    @media screen and (max-width: 996px) {
+        height: 2rem;
+        animation: 
+        typing 2s steps(50, end),
+        blink-caret .75s step-end infinite;
+        width: fit-content;
+        
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 65% }
+        }       
     }
 }
