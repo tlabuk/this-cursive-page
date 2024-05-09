@@ -2,10 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 15%;
-    margin-right: 10%;
+    margin-left: 9%;
+    // margin-right: 10%;
     margin-top: 5%;
-    height: 40vh;
+    height: 50vh;
     flex-shrink: 1;
 
     @media screen and (max-width: 1230px) {
@@ -41,6 +41,7 @@
     width: 40%;
     flex-shrink: 2;
     margin-right: 10%;
+    gap: 540px;
 }
 
 .hero__title {

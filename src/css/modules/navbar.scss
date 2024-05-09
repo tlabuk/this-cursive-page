@@ -39,3 +39,19 @@
 .footer__col {
     text-align: center;
 }
+
+.col {
+  padding: 1rem;
+   @media screen and (min-width: 1700px) {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+.container {
+    @media screen and (min-width: 1690px) {
+    padding-right: 150px !important;
+    padding-left: 150px !important;
+    max-width: 120% !important;
+  }
+}

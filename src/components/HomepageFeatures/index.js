@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 import ReadMoreButton from './ReadMoreButton/ReadMore';
 
 const FeatureList = [
@@ -66,8 +66,8 @@ function Feature({ Svg, title, description, href }) {
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+      <div className="padding-horiz--md">
+        <Heading as="h3" className="text--center">{title}</Heading>
         <p>{description}</p>
         <ReadMoreButton href={href} />
       </div>
@@ -76,16 +76,12 @@ function Feature({ Svg, title, description, href }) {
 }
 
 export default function HomepageFeatures() {
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className={clsx(styles.sectionTitle, isVisible && styles.slideIn)}>Check samples of my work</div>
+        <div className={clsx(styles.sectionTitle)}>Check samples of my work</div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
