@@ -81,6 +81,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.jpg',
+      metadata: [
+        { name: 'og:image', content: 'img/social-card.jpg' }
+      ],
       navbar: {
         logo: {
           alt: 'Site logo',
