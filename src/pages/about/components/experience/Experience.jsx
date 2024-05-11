@@ -10,7 +10,7 @@ const Experience = () => {
       id: "prof_exp_1",
       startDate: "August 2021",
       endDate: "",
-      position: "Tech writer II → Senior Tech Writer",
+      position: "Tech writer II → Senior tech writer",
       company: {
         name: "Nobl9",
         info: "USA start-up building SLO management platform",
@@ -32,7 +32,7 @@ const Experience = () => {
       id: "prof_exp_2",
       startDate: "May 2020",
       endDate: "Dec 2022",
-      position: "Freelance Scientific Writer (R&D)",
+      position: "Freelance scientific writer (R&D)",
       company: {
         name: "Colibrí",
         info: "Consultancy company, based in Kraków, Poland",
@@ -63,7 +63,7 @@ const Experience = () => {
       id: "prof_exp_3",
       startDate: "Aug 2020",
       endDate: "Aug 2021",
-      position: "Technical Writer",
+      position: "Technical writer",
       company: {
         name: "Motorola Solutions",
         info: "Worldwide provider of ICT solutions",
@@ -102,7 +102,7 @@ const Experience = () => {
       id: "prof_exp_6",
       startDate: "Oct 2014",
       endDate: "Oct 2019",
-      position: "PhD Researcher",
+      position: "PhD researcher",
       company: {
         name: "University of Silesia",
         info: "International scientific reasearch project",
