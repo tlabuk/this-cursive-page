@@ -49,7 +49,7 @@ const config = {
         },
         sitemap: {
           lastmod: 'date',
-          changefreq: 'weekly',
+          changefreq: 'daily',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
