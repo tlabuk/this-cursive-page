@@ -80,7 +80,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/hero/logo-big-horizontal.jpg',
+      image: 'img/socialcard.jpg',
       navbar: {
         logo: {
           alt: 'Site logo',
