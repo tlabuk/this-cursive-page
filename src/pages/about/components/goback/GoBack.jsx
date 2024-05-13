@@ -6,7 +6,7 @@ export default function GoBack() {
   return (
     <a className={styles.goback} href="/this-cursive-page/">
       <AiOutlineArrowLeft size={35} />
-      <span className={`${styles.tooltip} ${styles.text}`}>Back</span>
+      <span className={`${styles.tooltip} ${styles.text}`}>Back to home</span>
     </a>
   );
 }
