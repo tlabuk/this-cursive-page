@@ -79,10 +79,34 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+
       image: 'img/social-card.jpg',
       metadata: [
+        { name: 'keywords', content: 'advanced technical writing, scientific writing, API documentation' },
+        { name: 'description', content: 'Your brief and informative description about the site.' },
         { name: 'og:image', content: 'img/social-card.jpg' }
+      ],
+      headTags: [
+        {
+          tagName: 'link',
+          attributes: {
+            rel: 'preconnect',
+            href: 'https://tlabuk.github.io/this-cursive-page/',
+          },
+        },
+        {
+          tagName: 'script',
+          attributes: {
+            type: 'application/ld+json',
+          },
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org/',
+            '@type': 'Organization',
+            name: 'Your Organization Name',
+            url: 'https://tlabuk.github.io/this-cursive-page/',
+            logo: 'img/logo.svg',
+          }),
+        },
       ],
       navbar: {
         logo: {
@@ -115,18 +139,18 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Other resources',
             items: [
               {
-                label: 'Stack Overflow',
+                label: 'Resource 1',
                 href: '/',
               },
               {
-                label: 'Discord',
+                label: 'Resource 2',
                 href: '/',
               },
               {
-                label: 'Twitter',
+                label: 'Resource 3',
                 href: '/',
               },
             ],
