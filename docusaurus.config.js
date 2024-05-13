@@ -137,6 +137,11 @@ const config = {
             label: 'Dummy docs',
             position: 'left',
           },
+          {
+            to: '/this-cursive-page/docs/odyssey-game',
+            label: 'The Odyssey game',
+            position: 'left'
+          }
         ],
       },
       footer: {
