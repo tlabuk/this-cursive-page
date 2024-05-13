@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'This.cursive | Expert technical writing',
-  tagline: 'Discourse rules all',
+  tagline: 'Discourse rules all. Empowering excellence in technical and scientific communication: Your gateway to expert technical writing and API documentation',
   favicon: 'img/favicon.ico',
   url: 'https://tlabuk.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
