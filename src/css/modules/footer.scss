@@ -6,3 +6,21 @@ footer {
 .footer__col {
   text-align: center;
 }
+
+.footer__col a::before {
+  position: relative;
+  top: 3px;
+  padding-right: 6px;
+}
+
+.footer__col a[href="https://www.linkedin.com/in/tomasz-labuk/"]::before {
+  content: url(/img/footer/linkedin-icon.svg);
+}
+
+.footer__col a[href="https://independent.academia.edu/TomaszLabuk"]::before {
+  content: url(/img/footer/academia-icon.svg);
+}
+
+.footer__col a[href="https://github.com/tlabuk"]::before {
+  content: url(/img/footer/github-icon.svg);
+}

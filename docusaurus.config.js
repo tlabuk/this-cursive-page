@@ -151,46 +151,35 @@ const config = {
             title: 'Other resources',
             items: [
               {
-                label: 'Resource 1',
-                href: '/',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/tomasz-labuk/',
               },
               {
-                label: 'Resource 2',
-                href: '/',
+                label: 'Academia',
+                href: 'https://independent.academia.edu/TomaszLabuk',
               },
               {
-                label: 'Resource 3',
-                href: '/',
+                label: 'GitHub',
+                href: 'https://github.com/tlabuk',
               },
             ],
           },
           {
-            title: 'Other places',
+            title: 'Other resources',
             items: [
               {
-                html:
-                  `
-                    <a href="https://www.linkedin.com/in/tomasz-labuk/" target="_blank" rel="noreferrer noopener">
-                      <img src="img/footer/linkedin-icon.svg" alt="Deploys by Netlify" width="20" height="20" />
-                    </a>
-                  `
+                label: 'Resource',
+                href: '/'
               },
               {
-                html:
-                  `
-                  <a href="https://independent.academia.edu/TomaszLabuk" target="_blank" rel="noreferrer noopener">
-                    <img src="img/footer/academia-logo.svg" width="20" height="20">
-                  </a>
-                `
+                label: 'Resource',
+                href: '/'
               },
               {
-                html:
-                  `
-                  <a href="https://github.com/tlabuk" target="_blank" rel="noreferrer noopener">
-                    <img src="img/footer/github-icon.svg" width="20" height="20">
-                  </a>
-                `
-              }
+                label: 'Resource',
+                href: '/'
+              },
+
             ],
           },
         ],
