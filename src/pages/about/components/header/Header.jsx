@@ -18,9 +18,10 @@ const Header = () => {
       name: "Tomasz Labuk, Ph.D., <br/> Senior Technical Writer",
       lead: "Even the best piece of code can prove to be useless when it is not documented well enough. In the so-called age of UX, user experience is not a commodity, but a staple of every software product. And surely, good technical documentation is one of the founding pillars of UX. Drawing from my international academic background and experience in technical writing for Deep Tech innovations, I blend these with front-end technology knowledge to create comprehensive software documentation that enhances userexperience.",
       email: "this.cursive@gmail.com",
-      phone: "+48 000 000 000",
+      phone: "+48 xxx xxx xxx",
       address: "Kraków, Poland",
-      website: "https://tlabuk.github.io/this-cursive-page/",
+      website:
+        "<a href='/this-cursive-page/'>https://tlabuk.github.io/this-cursive-page/</a>",
     },
   ];
 
@@ -92,7 +93,10 @@ const Header = () => {
                 </span>
                 <p className={styles.infoItem__Text}>
                   Website:{" "}
-                  <span className={styles.text}>{headerData[0].website}</span>
+                  <span
+                    className={styles.text}
+                    dangerouslySetInnerHTML={{ __html: headerData[0].website }}
+                  />
                 </p>
               </li>
             </ul>
