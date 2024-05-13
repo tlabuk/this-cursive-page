@@ -168,12 +168,12 @@ const config = {
             title: 'Other resources',
             items: [
               {
-                label: 'Resource',
-                href: '/'
+                label: 'Ph.D. thesis',
+                href: 'https://opus.us.edu.pl/info/phd/USLe9b9fbcfe5a44450af007b14af391dcf/'
               },
               {
-                label: 'Resource',
-                href: '/'
+                label: 'The Codex',
+                href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf'
               },
               {
                 label: 'Resource',
