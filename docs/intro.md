@@ -1,3 +1,52 @@
 ---
 unlisted: true
 ---
+
+# The Odyssey game
+
+```javascript
+// Welcome to the Odyssey Game
+
+// Define the main character
+class Odysseus {
+  constructor(name, strength, wit) {
+    this.name = name;
+    this.strength = strength;
+    this.wit = wit;
+  }
+
+  // Method for facing challenges
+  faceChallenge(challenge) {
+    if (challenge.difficulty > this.strength + this.wit) {
+      console.log(
+        `${this.name} faced ${challenge.name} but couldn't overcome it.`
+      );
+    } else {
+      console.log(
+        `${this.name} bravely faced ${challenge.name} and emerged victorious!`
+      );
+    }
+  }
+}
+
+// Define challenges
+class Challenge {
+  constructor(name, difficulty) {
+    this.name = name;
+    this.difficulty = difficulty;
+  }
+}
+
+// Instantiate Odysseus
+const odysseus = new Odysseus("Odysseus", 8, 9);
+
+// Instantiate challenges
+const cyclops = new Challenge("Cyclops", 10);
+const sirens = new Challenge("Sirens", 7);
+const scyllaAndCharybdis = new Challenge("Scylla and Charybdis", 12);
+
+// Odysseus faces challenges
+odysseus.faceChallenge(cyclops);
+odysseus.faceChallenge(sirens);
+odysseus.faceChallenge(scyllaAndCharybdis);
+```

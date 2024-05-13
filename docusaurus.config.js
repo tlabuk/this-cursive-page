@@ -193,7 +193,11 @@ const config = {
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        darkTheme: prismThemes.vsDark,
+      },
+      themes: ['@docusaurus/theme-mermaid'],
+      markdown: {
+        mermaid: true,
       },
     }),
   plugins: ['docusaurus-plugin-sass'],
