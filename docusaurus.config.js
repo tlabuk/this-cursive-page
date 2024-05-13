@@ -79,7 +79,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: 'img/social-card.jpg',
       metadata: [
         { name: 'keywords', content: 'advanced technical writing, scientific writing, API documentation' },
