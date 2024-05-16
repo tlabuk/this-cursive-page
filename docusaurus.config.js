@@ -84,7 +84,6 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-      image: 'img/social-card.jpg',
       metadata: [
         { name: 'keywords', content: 'advanced technical writing, scientific writing, API documentation' },
         { name: 'description', content: 'Your brief and informative description about the site.' },

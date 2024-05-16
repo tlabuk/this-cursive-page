@@ -104,36 +104,36 @@ const Header = () => {
               className={`${styles.contactSocialList} ${styles.flex} ${styles.items__Center}`}
             >
               <li className={styles.socialItem}>
-                <Link to="https://independent.academia.edu/TomaszLabuk">
+                <a href="https://independent.academia.edu/TomaszLabuk">
                   <SiAcademia size={20} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Academia
                   </span>
-                </Link>
+                </a>
               </li>
               <li className={styles.socialItem}>
-                <Link to="https://www.linkedin.com/in/tomasz-labuk/">
+                <a href="https://www.linkedin.com/in/tomasz-labuk/">
                   <AiFillLinkedin size={25} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Linkedin
                   </span>
-                </Link>
+                </a>
               </li>
               <li className={styles.socialItem}>
-                <Link to="/">
+                <a href="mailto:tomek.labuk@gmail.com">
                   <AiFillGoogleCircle size={25} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Email
                   </span>
-                </Link>
+                </a>
               </li>
               <li className={styles.socialItem}>
-                <Link to="/">
+                <a href="https://github.com/tlabuk">
                   <AiFillGithub size={25} />
                   <span className={`${styles.tooltip} ${styles.text}`}>
                     Github
                   </span>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
