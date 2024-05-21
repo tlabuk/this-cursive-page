@@ -8,6 +8,7 @@
     left: 1%;
     top: 30vh;
     transition: $transition-default;
+    z-index: 2;
 
     &:hover {
         scale: 1.1;
@@ -21,7 +22,7 @@
 
     .tooltip {
         position: absolute;
-        width:max-content;
+        width: max-content;
         top: 50%;
         left: calc(100% + 8px); /* Adjusted position to the right */
         transform: translateY(-50%);
@@ -35,6 +36,7 @@
         opacity: 0;
         visibility: hidden;
         transition: $transition-default;
+        ;
 
         &::after {
             content: "";
