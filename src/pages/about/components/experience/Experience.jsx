@@ -75,7 +75,7 @@ const Experience = () => {
     {
       id: "prof_exp_4",
       startDate: "Nov 2019",
-      endDate: "Ap4 2020",
+      endDate: "Apr 2020",
       position: "R&D consultant",
       company: {
         name: "Gaeu Consulting",
