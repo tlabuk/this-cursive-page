@@ -45,7 +45,7 @@ const CertificateAward = () => {
       provider: "Freie Universität Berlin",
       course: "Research atay with Alumni Programme at Freie Universität Berlin",
       description:
-        "Two-month research stay awarded for scholarly projacts led by doctoral students",
+        "Two-month research stay awarded for scholarly projects led by doctoral students",
       startDate: "Sep 2015",
       endDate: "Oct 2015",
     },
