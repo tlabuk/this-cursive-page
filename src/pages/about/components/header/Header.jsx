@@ -16,7 +16,7 @@ const Header = () => {
   const headerData = [
     {
       name: "Tomasz Labuk, Ph.D., <br/> Senior Technical Writer",
-      lead: "Even the best piece of code can prove to be useless when it is not documented well enough. In the so-called age of UX, user experience is not a commodity, but a staple of every software product. And surely, good technical documentation is one of the founding pillars of UX. Drawing from my international academic background and experience in technical writing for Deep Tech innovations, I blend these with front-end technology knowledge to create comprehensive software documentation that enhances userexperience.",
+      lead: "Even the best piece of code can prove to be useless when it is not documented well enough. In the so-called age of UX, user experience is not a commodity, but a staple of every software product. And surely, good technical documentation is one of the founding pillars of UX. Drawing from my international academic background and experience in technical writing for Deep Tech innovations, I blend these with front-end technology knowledge to create complex software documentation that improves user experience.",
       email: "this.cursive@gmail.com",
       phone: "+48 xxx xxx xxx",
       address: "Kraków, Poland",
