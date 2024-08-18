@@ -16,6 +16,18 @@ import skillTypescript from "/static/img/about/skill_typescript.png";
 
 const skillsData = [
   {
+    id: "skill_9",
+    icon: skillApi,
+    name: "API documentation",
+    description: "Creating and developing API documentation",
+  },
+  {
+    id: "skill_10",
+    icon: skillWireframe,
+    name: "Technical writing",
+    description: "Complex technical writing",
+  },
+  {
     id: "skill_1",
     icon: skillReact,
     name: "React.js",
@@ -41,45 +53,33 @@ const skillsData = [
   },
   {
     id: "skill_5",
-    icon: skillGit,
-    name: "GitHub",
-    description: "Advanced GitHub concepts",
-  },
-  {
-    id: "skill_6",
-    icon: skillApi,
-    name: "API documentation",
-    description: "Creating and developing API documentation",
-  },
-  {
-    id: "skill_7",
-    icon: skillWireframe,
-    name: "Technical writing",
-    description: "Complex technical writing",
-  },
-  {
-    id: "skill_8",
-    icon: skillVsc,
-    name: "Visual Studio Code",
-    description: "Editing & managing code in VSC, developing custom extensions",
-  },
-  {
-    id: "skill_9",
     icon: skillYaml,
     name: "YAML",
     description: "Structuring data with YAML",
   },
   {
-    id: "skill_10",
+    id: "skill_6",
     icon: skillJson,
     name: "JSON",
     description: "Structuring and managing application data with JSON",
   },
   {
-    id: "skill_11",
+    id: "skill_7",
     icon: skillTypescript,
     name: "TypeScript",
     description: "Leveraging React applications with Typescript",
+  },
+  {
+    id: "skill_8",
+    icon: skillGit,
+    name: "GitHub",
+    description: "Advanced GitHub concepts",
+  },
+  {
+    id: "skill_11",
+    icon: skillVsc,
+    name: "Visual Studio Code",
+    description: "Editing & managing code in VSC, developing custom extensions",
   },
 ];
 
