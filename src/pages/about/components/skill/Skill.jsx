@@ -25,13 +25,13 @@ const skillsData = [
     id: "skill_2",
     icon: skillHtml,
     name: "HTML5",
-    description: "Hypertext Markup",
+    description: "Hypertext markup",
   },
   {
     id: "skill_3",
     icon: skillCss,
     name: "CSS",
-    description: "Web development using CSS",
+    description: "Web development in CSS",
   },
   {
     id: "skill_4",
