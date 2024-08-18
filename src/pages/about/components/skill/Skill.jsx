@@ -10,6 +10,8 @@ import skillWireframe from "/static/img/about/skill_wireframe.png";
 import skillReact from "/static/img/about/skill_react.png";
 import skillJs from "/static/img/about/skill_js.png";
 import skillGit from "/static/img/about/skill_github.png";
+import skillYaml from "/static/img/about/skill_yaml.png";
+import skillJson from "/static/img/about/skill_json.png";
 
 const skillsData = [
   {
@@ -59,6 +61,18 @@ const skillsData = [
     icon: skillVsc,
     name: "Visual Studio Code",
     description: "Editing & managing code in VSC, developing custom extensions",
+  },
+  {
+    id: "skill_9",
+    icon: skillYaml,
+    name: "YAML",
+    description: "Structuring data with YAML",
+  },
+  {
+    id: "skill_10",
+    icon: skillJson,
+    name: "JSON",
+    description: "Structuring data with JSON",
   },
 ];
 
