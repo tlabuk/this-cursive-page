@@ -12,6 +12,7 @@ import skillJs from "/static/img/about/skill_js.png";
 import skillGit from "/static/img/about/skill_github.png";
 import skillYaml from "/static/img/about/skill_yaml.png";
 import skillJson from "/static/img/about/skill_json.png";
+import skillTypescript from "/static/img/about/skill_typescript.png";
 
 const skillsData = [
   {
@@ -30,7 +31,7 @@ const skillsData = [
     id: "skill_3",
     icon: skillCss,
     name: "CSS",
-    description: "Attractive Design & Frameworks",
+    description: "Web development using CSS",
   },
   {
     id: "skill_4",
@@ -72,7 +73,13 @@ const skillsData = [
     id: "skill_10",
     icon: skillJson,
     name: "JSON",
-    description: "Structuring data with JSON",
+    description: "Structuring and managing application data with JSON",
+  },
+  {
+    id: "skill_11",
+    icon: skillTypescript,
+    name: "TypeScript",
+    description: "Leveraging React applications with Typescript",
   },
 ];
 
