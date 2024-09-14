@@ -34,7 +34,7 @@
     "@docusaurus/module-type-aliases": "3.5.2",
     "@docusaurus/types": "3.5.2",
     "sass-loader": "^14.2.1",
-    "webpack": "^5.91.0"
+    "webpack": "^5.94.0"
   },
   "browserslist": {
     "production": [
