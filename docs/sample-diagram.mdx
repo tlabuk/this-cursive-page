@@ -9,31 +9,31 @@ import Mermaid from '@theme/Mermaid';
 
 The following diagram illustrates the interaction between various components of a distributed system, focusing on the API calls between services such as the frontend, backend, and authentication services. It also includes additional layers like database queries, caching, message queue processing, and error handling to provide a complete overview of the system's architecture.
 
-### Entities and Flows:
+### Entities and flows
 
-1. **User Request**:
-    - The process begins with the `User` sending a request to the `Frontend Service`. This represents the entry point for user interactions in the system.
+1. **User request**:
+    - The process begins with the `User` sending a request to the `Frontend service`. This represents the entry point for user interactions in the system.
 
-2. **Frontend and Backend Services**:
-    - The `Frontend Service` interacts with the `Backend Service` through an API call. The backend manages the business logic and processes necessary for fulfilling the user's request.
+2. **Frontend and backend services**:
+    - The `Frontend service` interacts with the `Backend service` through an API call. The backend manages the business logic and processes necessary for fulfilling the user's request.
   
-3. **Database Query**:
-    - The `Backend Service` queries the `Database` to retrieve or update information required for the request. The `Database` acts as a persistent data storage.
+3. **Database query**:
+    - The `Backend service` queries the `Database` to retrieve or update information required for the request. The `Database` acts as a persistent data storage.
   
 4. **Authentication**:
-    - The `Backend Service` communicates with the `Auth Service` to handle user authentication, ensuring secure access. If successful, the `Auth Service` returns a JWT token to the frontend for authorization purposes.
+    - The `Backend service` communicates with the `Auth service` to handle user authentication, ensuring secure access. If successful, the `Auth service` returns a JWT token to the frontend for authorization purposes.
   
-5. **Cache Layer**:
-    - Before querying the database, the `Frontend Service` checks the `Cache Layer` for cached data. If the data is available (`Cache Hit`), it retrieves it from the `In-Memory Cache`. If not (`Cache Miss`), it proceeds with querying the database.
+5. **Cache layer**:
+    - Before querying the database, the `Frontend service` checks the `Cache layer` for cached data. If the data is available (`Cache hit`), it retrieves it from the `In-memory Cache`. If not (`Cache miss`), it proceeds with querying the database.
   
-6. **Message Queue and Workers**:
-    - The `Backend Service` may delegate tasks to a `Message Queue`, which distributes these tasks to workers (`Worker 1`, `Worker 2`). Each worker processes the task and stores the `Processed Data` in a shared storage.
+6. **Message queue and workers**:
+    - The `Backend service` may delegate tasks to a `Message queue`, which distributes these tasks to workers (`Worker 1`, `Worker 2`). Each worker processes the task and stores the `Processed data` in a shared storage.
   
-7. **Error Handling**:
-    - If an authentication failure occurs (e.g., invalid credentials), the system redirects the user to the `Login Page`.
-    - For internal errors (e.g., service failures), the user is shown an error page (`Error Page`). All errors are logged in `Error Logs` for future investigation.
+7. **Error handling**:
+    - If an authentication failure occurs (e.g., invalid credentials), the system redirects the user to the `Login page`.
+    - For internal errors (e.g., service failures), the user is shown an error page (`Error page`). All errors are logged in `Error logs` for future investigation.
   
-8. **Additional Flows**:
+8. **Additional flows**:
     - Users are redirected back to the main application from the login page upon successful login.
     - Logged errors are stored in the system for auditing and debugging purposes.
 
@@ -41,29 +41,29 @@ The following diagram illustrates the interaction between various components of 
 <Mermaid
   value={`graph TD
     %% Entities
-    A[User] -->|Request| B[Frontend Service]
-    B -->|API Call| C[Backend Service]
+    A[User] -->|Request| B[Frontend service]
+    B -->|API Call| C[Backend service]
     C -->|Query| D[(Database)]
-    C --> E[Auth Service]
-    E -->|JWT Token| B
+    C --> E[Auth service]
+    E -->|JWT token| B
 
     B --> F{Cache Layer}
-    F -->|Cached| G[In-Memory Cache]
+    F -->|Cached| G[In-memory cache]
     F -->|Miss| D
 
-    C --> H{Message Queue}
+    C --> H{Message queue}
     H --> I[Worker 1]
     H --> J[Worker 2]
-    I -->|Processed| K[(Processed Data)]
+    I -->|Processed| K[(Processed data)]
     J -->|Processed| K
 
     %% Errors
-    E -.->|401 Error| L((Login Page))
-    B -.->|500 Error| M((Error Page))
+    E -.->|401 Error| L((Login page))
+    B -.->|500 Error| M((Error page))
 
     %% Additional Flows
     L -->|Redirect| A
-    M -->|Log| N[(Error Logs)]`}
+    M -->|Log| N[(Error logs)]`}
 />
 
 ## Sample API architecture diagram
@@ -72,29 +72,29 @@ This diagram provides an architectural overview of a distributed system, showcas
 
 ### Key components and interactions:
 
-1. **Client (User)**:
+1. **Client (user)**:
     - The `User` initiates requests to the system through the frontend. This represents the entry point of the architecture where user interactions begin.
 
 2. **Frontend**:
-    - The `Frontend Service` handles incoming user requests and communicates with the `Backend Service` via a **REST API**.
-    - Before accessing the `Database`, the `Frontend Service` checks the `Cache Layer` to retrieve any cached data from the `In-Memory Cache`. If no cached data is found, it proceeds to query the persistent `Database`.
+    - The `Frontend service` handles incoming user requests and communicates with the `Backend service` via a **REST API**.
+    - Before accessing the `Database`, the `Frontend service` checks the `Cache layer` to retrieve any cached data from the `In-memory cache`. If no cached data is found, it proceeds to query the persistent `Database`.
 
 3. **Backend**:
-    - The `Backend Service` plays a key role in processing the logic of the user requests. It interacts with:
-        - The `Auth Service` to authenticate users and issue JWT tokens for secure communication.
+    - The `Backend service` plays a key role in processing the logic of the user requests. It interacts with:
+        - The `Auth service` to authenticate users and issue JWT tokens for secure communication.
         - The `Database` to query or update information as needed.
-        - The `Task Queue` to offload tasks that require background processing to worker services.
+        - The `Task queue` to offload tasks that require background processing to worker services.
 
-4. **Processing (Workers)**:
-    - The `Task Queue` distributes tasks to multiple workers (`Worker 1` and `Worker 2`), which handle time-consuming processes in the background.
-    - Once processed, the workers store their results in a `Data Store` for later retrieval.
+4. **Processing (workers)**:
+    - The `Task queue` distributes tasks to multiple workers (`Worker 1` and `Worker 2`), which handle time-consuming processes in the background.
+    - Once processed, the workers store their results in a `Data store` for later retrieval.
 
-5. **Error Handling**:
-    - If the `Auth Service` encounters an authorization failure, a **401 Unauthorized** error is returned, and the user is redirected to the `Login Page` to retry their login.
-    - In case of system failures, such as a **500 Internal Server Error**, the user is shown an `Error Page`. All errors are logged in the `Error Logs` for debugging and monitoring purposes.
+5. **Error handling**:
+    - If the `Auth service` encounters an authorization failure, a **401 Unauthorized** error is returned, and the user is redirected to the `Login page` to retry their login.
+    - In case of system failures, such as a **500 Internal Server Error**, the user is shown an `Error page`. All errors are logged in the `Error logs` for debugging and monitoring purposes.
 
-6. **Flows and Redirects**:
-    - After successfully logging in from the `Login Page`, the user is redirected back to the main application.
+6. **Flows and redirects**:
+    - After successfully logging in from the `Login page`, the user is redirected back to the main application.
     - Error logs capture important details about failures for further analysis.
 
 ### API diagram
@@ -110,33 +110,33 @@ This architecture diagram provides a high-level overview of how API requests are
 
     %% Frontend
     subgraph Frontend
-        B[Frontend Service] -->|REST API| C[Backend Service]
-        B --> F{Cache Layer}
-        F --> G[In-Memory Cache]
+        B[Frontend Service] -->|REST API| C[Backend service]
+        B --> F{Cache layer}
+        F --> G[In-memory cache]
         F --> D[(Database)]
     end
 
     %% Backend
     subgraph Backend
-        C -->|Database Query| D
-        C -->|Authenticate| E[Auth Service]
-        C -->|Message Queue| H[Task Queue]
-        E -->|JWT Token| B
+        C -->|Database query| D
+        C -->|Authenticate| E[Auth service]
+        C -->|Message queue| H[Task queue]
+        E -->|JWT token| B
     end
 
-    %% Workers and Processing
+    %% Workers and processing
     subgraph Processing
         H --> I[Worker 1]
         H --> J[Worker 2]
-        I -->|Processed Data| K[Data Store]
-        J -->|Processed Data| K
+        I -->|Processed data| K[Data store]
+        J -->|Processed data| K
     end
 
     %% Errors and Logging
     subgraph Error Handling
-        C -.->|500 Error| M[Error Page]
-        E -.->|401 Error| L[Login Page]
-        M --> N[(Error Logs)]
+        C -.->|500 Error| M[Error page]
+        E -.->|401 Error| L[Login page]
+        M --> N[(Error logs)]
     end
 
     %% Flows and Redirects
