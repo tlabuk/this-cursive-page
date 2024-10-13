@@ -88,7 +88,7 @@ const config = {
       },
       metadata: [
         { name: 'keywords', content: 'advanced technical writing, scientific writing, API documentation' },
-        { name: 'description', content: 'Your brief and informative description about the site.' },
+        { name: 'description', content: 'Expert technical writing and technical communication consulting.' },
         { name: 'og:image', content: 'img/social-card.jpg' }
       ],
       headTags: [
