@@ -1,0 +1,67 @@
+---
+id: api-diagram
+sidebar_position: 2
+title: API diagram
+---
+import Mermaid from '@theme/Mermaid';
+
+# API Interaction flow diagram
+
+This diagram illustrates the interaction between various components of a distributed system, focusing on the API calls between services such as the frontend, backend, and authentication services. It also includes additional layers like database queries, caching, message queue processing, and error handling to provide a complete overview of the system's architecture.
+
+### Entities and Flows:
+
+1. **User Request**:
+    - The process begins with the `User` sending a request to the `Frontend Service`. This represents the entry point for user interactions in the system.
+
+2. **Frontend and Backend Services**:
+    - The `Frontend Service` interacts with the `Backend Service` through an API call. The backend manages the business logic and processes necessary for fulfilling the user's request.
+  
+3. **Database Query**:
+    - The `Backend Service` queries the `Database` to retrieve or update information required for the request. The `Database` acts as a persistent data storage.
+  
+4. **Authentication**:
+    - The `Backend Service` communicates with the `Auth Service` to handle user authentication, ensuring secure access. If successful, the `Auth Service` returns a JWT token to the frontend for authorization purposes.
+  
+5. **Cache Layer**:
+    - Before querying the database, the `Frontend Service` checks the `Cache Layer` for cached data. If the data is available (`Cache Hit`), it retrieves it from the `In-Memory Cache`. If not (`Cache Miss`), it proceeds with querying the database.
+  
+6. **Message Queue and Workers**:
+    - The `Backend Service` may delegate tasks to a `Message Queue`, which distributes these tasks to workers (`Worker 1`, `Worker 2`). Each worker processes the task and stores the `Processed Data` in a shared storage.
+  
+7. **Error Handling**:
+    - If an authentication failure occurs (e.g., invalid credentials), the system redirects the user to the `Login Page`.
+    - For internal errors (e.g., service failures), the user is shown an error page (`Error Page`). All errors are logged in `Error Logs` for future investigation.
+  
+8. **Additional Flows**:
+    - Users are redirected back to the main application from the login page upon successful login.
+    - Logged errors are stored in the system for auditing and debugging purposes.
+
+
+<Mermaid
+  value={`graph TD
+    %% Entities
+    A[User] -->|Request| B[Frontend Service]
+    B -->|API Call| C[Backend Service]
+    C -->|Query| D[(Database)]
+    C --> E[Auth Service]
+    E -->|JWT Token| B
+
+    B --> F{Cache Layer}
+    F -->|Cached| G[In-Memory Cache]
+    F -->|Miss| D
+
+    C --> H{Message Queue}
+    H --> I[Worker 1]
+    H --> J[Worker 2]
+    I -->|Processed| K[(Processed Data)]
+    J -->|Processed| K
+
+    %% Errors
+    E -.->|401 Error| L((Login Page))
+    B -.->|500 Error| M((Error Page))
+
+    %% Additional Flows
+    L -->|Redirect| A
+    M -->|Log| N[(Error Logs)]`}
+/>

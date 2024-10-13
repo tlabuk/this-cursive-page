@@ -76,6 +76,7 @@ const config = {
       },
     ]
   ],
+  plugins: ['docusaurus-plugin-sass', '@docusaurus/theme-mermaid'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -193,8 +194,10 @@ const config = {
       markdown: {
         mermaid: true,
       },
+      mermaid: {
+        theme: { light: 'neutral', dark: 'dark' },
+      }
     }),
-  plugins: ['docusaurus-plugin-sass'],
 };
 
 export default config;
