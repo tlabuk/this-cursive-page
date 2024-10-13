@@ -5,9 +5,9 @@ title: API diagram
 ---
 import Mermaid from '@theme/Mermaid';
 
-# API Interaction flow diagram
+# System architecture flow diagrams
 
-This diagram illustrates the interaction between various components of a distributed system, focusing on the API calls between services such as the frontend, backend, and authentication services. It also includes additional layers like database queries, caching, message queue processing, and error handling to provide a complete overview of the system's architecture.
+The following diagram illustrates the interaction between various components of a distributed system, focusing on the API calls between services such as the frontend, backend, and authentication services. It also includes additional layers like database queries, caching, message queue processing, and error handling to provide a complete overview of the system's architecture.
 
 ### Entities and Flows:
 
@@ -64,4 +64,82 @@ This diagram illustrates the interaction between various components of a distrib
     %% Additional Flows
     L -->|Redirect| A
     M -->|Log| N[(Error Logs)]`}
+/>
+
+## Sample API architecture diagram
+
+This diagram provides an architectural overview of a distributed system, showcasing how different components interact through APIs, caching, and worker processes. It highlights the system's core services and their relationships, including frontend-backend communication, database access, and background processing.
+
+### Key components and interactions:
+
+1. **Client (User)**:
+    - The `User` initiates requests to the system through the frontend. This represents the entry point of the architecture where user interactions begin.
+
+2. **Frontend**:
+    - The `Frontend Service` handles incoming user requests and communicates with the `Backend Service` via a **REST API**.
+    - Before accessing the `Database`, the `Frontend Service` checks the `Cache Layer` to retrieve any cached data from the `In-Memory Cache`. If no cached data is found, it proceeds to query the persistent `Database`.
+
+3. **Backend**:
+    - The `Backend Service` plays a key role in processing the logic of the user requests. It interacts with:
+        - The `Auth Service` to authenticate users and issue JWT tokens for secure communication.
+        - The `Database` to query or update information as needed.
+        - The `Task Queue` to offload tasks that require background processing to worker services.
+
+4. **Processing (Workers)**:
+    - The `Task Queue` distributes tasks to multiple workers (`Worker 1` and `Worker 2`), which handle time-consuming processes in the background.
+    - Once processed, the workers store their results in a `Data Store` for later retrieval.
+
+5. **Error Handling**:
+    - If the `Auth Service` encounters an authorization failure, a **401 Unauthorized** error is returned, and the user is redirected to the `Login Page` to retry their login.
+    - In case of system failures, such as a **500 Internal Server Error**, the user is shown an `Error Page`. All errors are logged in the `Error Logs` for debugging and monitoring purposes.
+
+6. **Flows and Redirects**:
+    - After successfully logging in from the `Login Page`, the user is redirected back to the main application.
+    - Error logs capture important details about failures for further analysis.
+
+### API diagram
+
+This architecture diagram provides a high-level overview of how API requests are routed through the system, emphasizing the interaction between the `Frontend`, `Backend`, and supporting services such as caching, authentication, and task processing. It is designed to give a clear understanding of how different services collaborate in a modern, distributed system, and how errors are handled to ensure a smooth user experience.
+
+<Mermaid 
+    value={`graph TB
+    %% Clients
+    subgraph Client
+        A[User] 
+    end
+
+    %% Frontend
+    subgraph Frontend
+        B[Frontend Service] -->|REST API| C[Backend Service]
+        B --> F{Cache Layer}
+        F --> G[In-Memory Cache]
+        F --> D[(Database)]
+    end
+
+    %% Backend
+    subgraph Backend
+        C -->|Database Query| D
+        C -->|Authenticate| E[Auth Service]
+        C -->|Message Queue| H[Task Queue]
+        E -->|JWT Token| B
+    end
+
+    %% Workers and Processing
+    subgraph Processing
+        H --> I[Worker 1]
+        H --> J[Worker 2]
+        I -->|Processed Data| K[Data Store]
+        J -->|Processed Data| K
+    end
+
+    %% Errors and Logging
+    subgraph Error Handling
+        C -.->|500 Error| M[Error Page]
+        E -.->|401 Error| L[Login Page]
+        M --> N[(Error Logs)]
+    end
+
+    %% Flows and Redirects
+    L -->|Redirect to| A
+    `}
 />
