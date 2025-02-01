@@ -21,7 +21,6 @@ const FeatureList = [
     Svg: require('@site/static/img/homepage/api.svg').default,
     description: (
       <>
-
         This OpenAPI specification outlines a dummy API with endpoints for user management. It provides code samples in Python, JavaScript, Java, and cURL for interacting with the API.
       </>
     ),
@@ -53,6 +52,16 @@ const FeatureList = [
     description: (
       <>
         While Intelligence of AI is of extremely limited sort, algorithms govern every aspect of our lives, from content on social media, to industry. Can FL improve how AI works?
+      </>
+    ),
+  },
+  {
+    title: 'The Belly as a Natural Symbol',
+    href: '/static/assets/anthropologies-of-gaster.pdf',
+    Svg: require('@site/static/img/homepage/pen.svg').default,
+    description: (
+      <>
+        Human belly conveys a rich web of symbolic notions in Byzantine literature. In this article I uncover and analyse the prevailing patterns of social conceptualisations of the belly.
       </>
     ),
   },
