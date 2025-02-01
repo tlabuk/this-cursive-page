@@ -57,7 +57,7 @@ const FeatureList = [
   },
   {
     title: 'The Belly as a Natural Symbol',
-    href: '/static/assets/anthropologies-of-gaster.pdf',
+    href: 'https://drive.google.com/file/d/1sG8RMs3vHbARF3IhCrZKSKcI-BH3iXJb/view?usp=sharing',
     Svg: require('@site/static/img/homepage/pen.svg').default,
     description: (
       <>
