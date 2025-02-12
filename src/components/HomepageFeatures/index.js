@@ -37,7 +37,7 @@ const FeatureList = [
   },
   {
     title: 'Intelligible AI',
-    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q3_2021.pdf',
+    href: 'https://drive.google.com/file/d/1k-AU2Hdz_ISCgDOl043OBCHAzV_-jtQB/view?usp=sharing',
     Svg: require('@site/static/img/homepage/ai.svg').default,
     description: (
       <>
@@ -47,7 +47,7 @@ const FeatureList = [
   },
   {
     title: 'Federated Machine Learning',
-    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q2_2021.pdf',
+    href: 'https://drive.google.com/file/d/1bsfvhZx8V-sbAkdHKbUkIQLDgnsdqLN5/view?usp=sharing',
     Svg: require('@site/static/img/homepage/web.svg').default,
     description: (
       <>
