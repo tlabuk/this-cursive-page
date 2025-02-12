@@ -27,7 +27,7 @@ const FeatureList = [
   },
   {
     title: 'Fungal computers',
-    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
+    href: 'https://drive.google.com/file/d/1AHebLK70ppV71LLQ0msd1lictxW7c6Ru/view?usp=sharing',
     Svg: require('@site/static/img/homepage/idea.svg').default,
     description: (
       <>
