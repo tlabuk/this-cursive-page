@@ -7,7 +7,7 @@ import ReadMoreButton from './ReadMoreButton/ReadMore';
 const FeatureList = [
   {
     title: 'Technical documentation for Nobl9',
-    href: 'https://www.davincilabs.eu/downloads/The_Codex_Q1_2022.pdf',
+    href: 'https://docs.nobl9.com/',
     Svg: require('@site/static/img/homepage/folder.svg').default,
     description: (
       <>
