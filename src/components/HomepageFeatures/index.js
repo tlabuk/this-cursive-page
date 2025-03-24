@@ -11,7 +11,7 @@ const FeatureList = [
     Svg: require('@site/static/img/homepage/folder.svg').default,
     description: (
       <>
-        Nobl9 is the first SLO platform that ensures monitoring of software projects. I’m a major contributor to Nobl9 documentation and web developer of documentation tools.
+        Nobl9 is the first SLO platform that ensures monitoring of software projects. I was a major contributor to Nobl9 documentation and web developer of documentation tools.
       </>
     ),
   },
