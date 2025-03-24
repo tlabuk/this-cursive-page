@@ -9,7 +9,7 @@ const Experience = () => {
     {
       id: "prof_exp_1",
       startDate: "August 2021",
-      endDate: "",
+      endDate: "February 2025",
       position: "Tech writer II → Senior tech writer",
       company: {
         name: "Nobl9",
