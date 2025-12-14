@@ -1,0 +1,39 @@
+.item {
+  background: var(--gradient-accent);
+  border-left: 3px solid var(--color-primary);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.item:hover {
+  background: linear-gradient(135deg, rgba(184, 92, 62, 0.15) 0%, rgba(184, 92, 62, 0.08) 100%);
+  transform: translateX(5px);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-light);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.company {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+  font-style: italic;
+}
+
+.description {
+  line-height: 1.7;
+  color: var(--color-text-medium);
+}

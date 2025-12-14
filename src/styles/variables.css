@@ -1,0 +1,75 @@
+:root {
+  /* Colors - Rust/Terracotta Palette */
+  --color-primary: #B85C3E;
+  --color-primary-light: rgba(184, 92, 62, 0.2);
+  --color-primary-lighter: rgba(184, 92, 62, 0.1);
+  --color-primary-lightest: rgba(184, 92, 62, 0.05);
+
+  /* Background Colors */
+  --color-bg-dark: #1a1410;
+  --color-bg-medium: #2d1f18;
+  --color-bg-card: #231813;
+  --color-bg-card-hover: #3d2820;
+
+  /* Text Colors */
+  --color-text-light: #F5E6D3;
+  --color-text-medium: #C9B5A0;
+  --color-text-muted: #9d8570;
+
+  /* Border Colors */
+  --color-border-default: rgba(184, 92, 62, 0.2);
+  --color-border-hover: #B85C3E;
+
+  /* Gradients */
+  --gradient-bg: linear-gradient(135deg, #1a1410 0%, #2d1f18 100%);
+  --gradient-card: linear-gradient(135deg, #231813 0%, #2d1f18 100%);
+  --gradient-card-hover: linear-gradient(135deg, #2d1f18 0%, #3d2820 100%);
+  --gradient-accent: linear-gradient(135deg, rgba(184, 92, 62, 0.1) 0%, rgba(184, 92, 62, 0.05) 100%);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Space Mono', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px rgba(184, 92, 62, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 100;
+  --z-fixed: 1000;
+  --z-modal: 10000;
+}

@@ -1,0 +1,78 @@
+{
+  "experience": [
+    {
+      "id": 1,
+      "title": "Staff Technical Writer",
+      "company": "Kong Inc.",
+      "date": "April 2025 - now",
+      "description": "Within the Kong docs team, I lead documentation for Kong’s AI Gateway. My work spans everything from AI plugins (AI proxies, guardrails, semantic caching, vector databases, MCP server handling, and more) to in-depth reference docs on advanced topics such as semantic similarity, AI load balancing, and cost optimization. I also own the overall vision and structure of AI Gateway documentation, serving as the main point of contact for how its technical story is shaped and told."
+    },
+    {
+      "id": 2,
+      "title": "Senior Technical Writer II",
+      "company": "Nobl9",
+      "date": "September 2021 - February 2025",
+      "description": "Collaborated with engineers and product managers to document a leading Service Level Objective (SLO) software platform. Created comprehensive documentation, developed React-based web tools, and refined user experience through clear microcopy. Supported backend engineers with concise messaging for command-line tools."
+    },
+    {
+      "id": 3,
+      "title": "Technical Writer",
+      "company": "Motorola Solutions",
+      "date": "August 2020 - August 2021",
+      "description": "Worked with system engineers to develop technical documentation for Motorola Solutions products. Designed and developed technically complex content into well-structured, communicative, and reusable output for various technical audiences."
+    },
+    {
+      "id": 4,
+      "title": "Freelance Writer",
+      "company": "Colibrí Innovation",
+      "date": "May 2020 - Present",
+      "description": "Translate complex technological ideas into captivating stories for funding authorities and diverse audiences. Leverage scientific and technical communication expertise to convey the value of deep tech innovation. Collaborate with innovative Swedish SMEs in Deep Tech to articulate their technologies for investors and funding agencies."
+    },
+    {
+      "id": 5,
+      "title": "R&D Consultant",
+      "company": "Gaeu Consulting",
+      "date": "November 2019 - April 2020",
+      "description": "Part of a diverse team of scientists, policy experts, and humanists paving the way for EU innovators in their journey towards early commercialization of their products."
+    },
+    {
+      "id": 6,
+      "title": "Resource Analyst",
+      "company": "Hitachi Vantara",
+      "date": "October 2018 - October 2019",
+      "description": "Part of a Global Delivery team responsible for successful delivery of IT (storage, IoT, converged cloud) projects across EMEA."
+    },
+    {
+      "id": 7,
+      "title": "Ph.D. Researcher",
+      "company": "University of Silesia",
+      "date": "October 2014 - October 2019",
+      "description": "Main researcher in an international project funded by National Centre Science Poland, investigating various aspects of 12th-century Byzantine culture. Thesis defended with honors: first-of-its-kind analysis of the appropriation of ancient Greek comic tradition in Byzantine literary works. Published 5 peer-reviewed articles and delivered conference presentations across Europe and the USA."
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Ph.D. in Literary Studies",
+      "institution": "University of Silesia",
+      "note": "Graduated with Honors",
+      "description": "Philological Faculty. Dissertation on Byzantine literature and ancient Greek comic tradition."
+    },
+    {
+      "id": 2,
+      "degree": "MA in Classical Philology",
+      "institution": "Jagiellonian University",
+      "description": "Specialization: Byzantine and Modern Greek Studies"
+    },
+    {
+      "id": 3,
+      "degree": "BA in Classical Philology",
+      "institution": "Jagiellonian University"
+    },
+    {
+      "id": 4,
+      "degree": "BA Arts-Omnibus Programme",
+      "institution": "University College Dublin, Ireland"
+    }
+  ]
+}

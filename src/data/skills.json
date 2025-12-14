@@ -1,0 +1,59 @@
+{
+  "skills": {
+    "practitioner": [
+      { "name": "React", "level": "Advanced" },
+      { "name": "TypeScript", "level": "Advanced" },
+      { "name": "JavaScript", "level": "Advanced" },
+      { "name": "SQL", "level": "Advanced" },
+      { "name": "NodeJS", "level": "Advanced" },
+      { "name": "CSS/SCSS", "level": "Advanced" },
+      { "name": "Mdx/Markdown", "level": "Advanced" },
+      { "name": "Git", "level": "Advanced" },
+      { "name": "YAML", "level": "Advanced" }
+    ],
+    "intermediate": [
+      { "name": "Python", "level": "Intermediate" },
+      { "name": "Go", "level": "Intermediate" },
+      { "name": "Docker", "level": "Intermediate" }
+    ],
+    "competencies": [
+      "Technical Writing",
+      "UX Writing",
+      "Scientific Writing",
+      "API Documentation",
+      "Business Analysis",
+      "Project Management",
+      "Problem Solving",
+      "Leadership",
+      "Teamwork",
+      "Mentoring",
+      "Agile & Scrum",
+      "Information Architecture",
+      "Stakeholder Communication",
+      "Coding & Scripting"
+    ]
+  },
+  "languages": [
+    { "name": "Polish", "level": "Native" },
+    { "name": "English", "level": "Native" },
+    { "name": "French", "level": "Advanced" },
+    { "name": "Greek", "level": "Advanced" },
+    { "name": "Ancient Greek", "level": "Advanced" },
+    { "name": "Latin", "level": "Advanced" }
+  ],
+  "awards": [
+    "Ph.D. Graduated with Honors",
+    "Scholarships for the best Ph.D. student (2016-2018)",
+    "Research stay with Alumni Programme, Freie Universität Berlin (2015)",
+    "Scholarships for the best BA/MA student (2009-2012)",
+    "3rd prize in dr. H.H. Stewart Scholarship in Latin (National University of Ireland, 2007)",
+    "Scholarship for the best student (Faculty of Philosophy, University College Dublin, 2007)"
+  ],
+  "conferences": [
+    "New York",
+    "Uppsala",
+    "Istanbul",
+    "Belgrade",
+    "Athens"
+  ]
+}

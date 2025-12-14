@@ -1,0 +1,40 @@
+{
+  "portfolioItems": [
+    {
+      "id": 1,
+      "title": "Technical Documentation",
+      "category": "Documentation",
+      "description": "Comprehensive guides and API documentation for complex software systems",
+      "tags": ["AI Gateway", "Developer documentation", "CLI Documentation"],
+      "icon": "FileText",
+      "link": "#technical-docs"
+    },
+    {
+      "id": 2,
+      "title": "Academic Research",
+      "category": "Research",
+      "description": "Byzantine literature and ancient Greek comic tradition analysis",
+      "tags": ["Peer-reviewed", "5 Publications", "International Conferences"],
+      "icon": "BookOpen",
+      "link": "#research"
+    },
+    {
+      "id": 3,
+      "title": "Deep Tech Writing",
+      "category": "Innovation",
+      "description": "Translating complex technological innovations for funding authorities and investors",
+      "tags": ["EU Innovators", "Swedish SMEs", "Commercialization"],
+      "icon": "Code",
+      "link": "#deep-tech"
+    },
+    {
+      "id": 4,
+      "title": "Creative & Editorial",
+      "category": "Writing",
+      "description": "Editorial content and storytelling for technology and innovation",
+      "tags": ["Technology Stories", "Communication", "Narrative"],
+      "icon": "Pen",
+      "link": "#editorial"
+    }
+  ]
+}
